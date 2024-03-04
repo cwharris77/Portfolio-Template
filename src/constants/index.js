@@ -225,7 +225,7 @@ const projects = [
   {
     id: 'project-4',
     name: 'Sudoku',
-    description: 'A sudoku game built as part of an Agile team using JavaFX',
+    description: 'A Sudoku game built as part of an Agile team using JavaFX',
     tags: [
       {
         name: 'Java',

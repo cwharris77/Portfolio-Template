@@ -23,9 +23,9 @@ const ProjectCard = ({
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, .75)}
       className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
+        active === id ? 'lg:flex-[3.5] flex-[10] min-h-[60vh]': 'lg:flex-[0.5] flex-[2]'
       } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
+      sm:h-[70vh] cursor-pointer card-shadow`}
       onClick={() => handleClick(id)}>
       <div
         className="absolute top-0 left-0 z-10 bg-jetLight 
@@ -67,19 +67,19 @@ const ProjectCard = ({
             </div>
 
             <h2
-              className="font-bold sm:text-[32px] text-[24px] 
+              className="font-bold sm:text-[2rem] text-[1.5rem] 
               text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]">
               {name}
             </h2>
             <p
-              className="text-white sm:text-[14px] text-[12px] 
+              className="text-white sm:text-[1rem] text-[.9rem] 
               max-w-3xl sm:leading-[24px] leading-[18px]
               font-poppins tracking-[1px]">
               {description}
             </p>
             <ul className="list-none sm:flex flex-row gap-1 mt-4 items-center">
             {tags.map((tag, index) => [
-              <li key={tag.name} className="text-white sm:text-[13px] text-[14px]">
+              <li key={tag.name} className="text-white sm:text-[1rem] text-[.8rem]">
                 {tag.name} 
               </li>,
               index !== tags.length - 1 && <li className="hidden sm:block" key={index}>&#8226;</li>,
@@ -150,7 +150,7 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col lg:min-h-[40vh] min-h-[80vh] sm:gap-3 gap-7">
+        <div className="mt-[55px] flex lg:flex-row flex-col lg:min-h-[70vh] min-h-[90vh] sm:gap-4 gap-4">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
