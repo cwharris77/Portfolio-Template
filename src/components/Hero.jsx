@@ -75,8 +75,8 @@ const Hero = () => {
         <div>
           <img
             className="absolute bottom-0 ml-[35%] 
-            xl:ml-[62%] lg:ml-[65%] xmd:ml-[65%] md:ml-[40%] sm:ml-[35%]
-            xl:h-[80vh] smd:h-[60vh] md:h-[65vh]"
+            2xl:ml-[65%] xl:ml-[62%] lg:ml-[65%] xmd:ml-[65%] md:ml-[40%] sm:ml-[35%]
+            2xl:h-[90vh] xl:h-[80vh] smd:h-[60vh] md:h-[65vh]"
             src={me}
             alt="Cooper"
           />
