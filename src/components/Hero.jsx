@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap, technology, me } from '../assets';
+import { technology, me } from '../assets';
 
 const Hero = () => {
   return (
@@ -14,13 +12,6 @@ const Hero = () => {
           className="w-full h-full sm:block hidden object-cover"
         />
       </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={bwmap}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
-        />
-      </div>
       <section
         className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
         sm:bg-hero bg-hero-mobile overflow-hidden">
@@ -29,10 +20,10 @@ const Hero = () => {
           lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}>
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
+          {/* <div className="flex flex-col justify-center items-center mt-5 ml-3">
             <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
             <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
-          </div>
+          </div> */}
 
           <div>
             <h1
@@ -84,8 +75,8 @@ const Hero = () => {
         <div>
           <img
             className="absolute bottom-0 ml-[35%] 
-            2xl:ml-[80%] lg:ml-[65%] xmd:ml-[65%] md:ml-[40%] sm:ml-[35%]
-            xl:h-[60vh] smd:h-[60vh] md:h-[65vh]"
+            xl:ml-[62%] lg:ml-[65%] xmd:ml-[65%] md:ml-[40%] sm:ml-[35%]
+            xl:h-[80vh] smd:h-[60vh] md:h-[65vh]"
             src={me}
             alt="Cooper"
           />
