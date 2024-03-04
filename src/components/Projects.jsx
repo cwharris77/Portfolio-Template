@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { github, pineapple, pineappleHover } from '../assets';
+import { github } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import InfoTile from './MoreInfo';
@@ -14,11 +14,10 @@ const ProjectCard = ({
   tags,
   image,
   repo,
-  demo,
   index,
   active,
   handleClick,
-  info,
+
 }) => {
   return (
     <motion.div

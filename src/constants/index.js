@@ -1,32 +1,12 @@
 import {
   frontend,
-  backend,
-  ux,
-  prototyping,
-  javascript,
   typescript,
   html,
   css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
   git,
-  figma,
   docker,
-  postgresql,
-  rubyrails,
-  graphql,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  space,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
   cloud,
   apple,
   IT,
@@ -44,7 +24,6 @@ import {
   uofa,
   stl,
   remotetasks,
-  linkedin,
   
 } from '../assets';
 
@@ -194,7 +173,7 @@ const projects = [
     info: "",
     image: cybertrip,
     repo: 'https://github.com/cwharris77/cyberTRIP',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    demo: '',
   },
   {
     id: 'project-2',
@@ -217,7 +196,7 @@ const projects = [
     info: "This project was accomplished as part of an Agile team",
     image: stl,
     repo: 'https://github.com/cwharris77/CSC-352/tree/main/pa9',
-    demo: 'https://movie-metro.netlify.app/',
+    demo: '',
   },
   {
     id: 'project-3',
@@ -264,7 +243,7 @@ const projects = [
     info: "",
     image: sudoku,
     repo: 'https://github.com/cwharris77/CSC-335/tree/main/team-project-segfault',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    demo: '',
   },
   {
     id: 'project-5',
@@ -288,7 +267,7 @@ const projects = [
     info: "",
     image: wiki,
     repo: 'https://github.com/cwharris77/CSC-210/tree/main/PA10-WikiRacer',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    demo: '',
   },
 ];
 
