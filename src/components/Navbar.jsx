@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 fixed 
       top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-9xl mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -34,28 +34,28 @@ const Navbar = () => {
             className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
           /> */}
           <div
-                onClick={() => window.open("https://www.linkedin.com/in/cooper-harris77/", '_blank')}
-                className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
-                <img
-                  src={linkedin}
-                  alt="Linkedin Link"
-                  className="object-cover rounded-full"
-                />
-              </div>
-              
-              <div
-                onClick={() => window.open("https://github.com/cwharris77", '_blank')}
-                className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
-                <img
-                  src={github}
-                  alt="Github Link"
-                  className="object-contain"
-                />
-              </div>
+            onClick={() => window.open("https://www.linkedin.com/in/cooper-harris77/", '_blank')}
+            className="bg-none sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+              flex justify-center items-center cursor-pointer
+              sm:opacity-[0.9] opacity-[0.8]">
+            <img
+              src={linkedin}
+              alt="Linkedin Link"
+              className="object-contain rounded-full"
+            />
+          </div>
+          
+          <div
+            onClick={() => window.open("https://github.com/cwharris77", '_blank')}
+            className="bg-night sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+              flex justify-center items-center cursor-pointer
+              sm:opacity-[0.9] opacity-[0.8]">
+            <img
+              src={github}
+              alt="Github Link"
+              className="object-contain rounded-full w-4/5 h-4/5"
+            />
+          </div>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (

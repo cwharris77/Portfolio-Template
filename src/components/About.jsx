@@ -31,17 +31,17 @@ const About = () => {
     <div className="-mt-[9rem]">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}></h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          I'm currently pursuing a double major in Computer Science and Information Science Technology and the Arts. 
-          My academic journey has equipped me with comprehensive knowledge and skills, with a focus on web development 
-          and software engineering. I'm proficient in several programming languages, including Java, Python, Javascript, 
-          Swift, and C. I've also gained experience using frameworks such as Express, React,
-          Flask and Django for web development. Whether it's building RESTful APIs or crafting dynamic user interfaces, I bring 
+        className="mt-4 text-taupe text-[18px] max-w-6xl leading-[30px]">
+          As a senior pursuing a double major in Computer Science and Information Science Technology and the Arts, 
+          my academic journey has equipped me with comprehensive knowledge and skills focusing on web development 
+          and software engineering. My proficiency extends across several programming languages, including Java, Python, Javascript, 
+          Swift, and C. I have also gained experience building web applications using frameworks such as Express, React,
+          Flask and Django. Whether it's building RESTful APIs or crafting dynamic user interfaces, I bring 
           a versatile skill set to the table.
       </motion.p>
 
