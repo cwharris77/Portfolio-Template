@@ -2,7 +2,7 @@
   "name": "cooper",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://cwharris77.github.io/portfolio-template",
+  "homepage": "https://cooper-harris.site",
   "type": "module",
   "scripts": {
     "dev": "vite",
