@@ -242,7 +242,7 @@ const projects = [
     ],
     info: "",
     image: sudoku,
-    repo: 'https://github.com/cwharris77/sudoku/tree/main/team-project-segfault',
+    repo: 'https://github.com/cwharris77/sudoku/tree/55886c9c5e931ae58ac5a63fc34a648056593e31/team-project-segfault',
     demo: '',
   },
   {
