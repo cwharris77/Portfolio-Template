@@ -242,7 +242,7 @@ const projects = [
     ],
     info: "",
     image: sudoku,
-    repo: 'https://github.com/cwharris77/CSC-335/tree/main/team-project-segfault',
+    repo: 'https://github.com/cwharris77/sudoku',
     demo: '',
   },
   {
@@ -266,7 +266,7 @@ const projects = [
     ],
     info: "",
     image: wiki,
-    repo: 'https://github.com/cwharris77/CSC-210/tree/main/PA10-WikiRacer',
+    repo: 'https://github.com/cwharris77/WikiRacer',
     demo: '',
   },
 ];
