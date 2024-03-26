@@ -195,7 +195,7 @@ const projects = [
     ],
     info: "This project was accomplished as part of an Agile team",
     image: stl,
-    repo: 'https://github.com/cwharris77/CSC-352/tree/main/pa9',
+    repo: 'https://github.com/cwharris77/STL-Creator/tree/main',
     demo: '',
   },
   {
