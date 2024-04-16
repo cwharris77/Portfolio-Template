@@ -58,6 +58,7 @@ import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
 import uofa from './company/uofa.png'
 import remotetasks from './company/remotetasks.png'
+import snapchat from './company/snapchat.png'
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -138,4 +139,5 @@ export {
   remotetasks,
   linkedin,
   wave,
+  snapchat
 };
