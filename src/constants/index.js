@@ -1,30 +1,29 @@
 import {
-  frontend,
-  typescript,
-  html,
-  css,
-  reactjs,
-  nodejs,
-  git,
-  docker,
-  cloud,
-  apple,
   IT,
-  python,
-  java,
-  swift,
-  c,
-  mongo,
-  express,
-  aws,
-  cybertrip,
   alien,
-  wiki,
-  sudoku,
-  uofa,
-  stl,
+  apple,
+  aws,
+  c,
+  cloud,
+  css,
+  cybertrip,
+  docker,
+  express,
+  frontend,
+  git,
+  html,
+  java,
+  mongo,
+  nodejs,
+  python,
+  reactjs,
   remotetasks,
-  
+  stl,
+  sudoku,
+  swift,
+  typescript,
+  uofa,
+  wiki
 } from '../assets';
 
 export const navLinks = [
@@ -133,21 +132,21 @@ const experiences = [
     company_name: `Housing & Residential Life ${'@'} University of Arizona`,
     icon: uofa,
     iconBg: '#e2002d',
-    date: 'June 2022 - Present',
+    date: 'June 2022 - May 2024',
   },
   {
     title: 'AI Reviewer',
     company_name: 'Remotetasks',
     icon: remotetasks,
     iconBg: '#35ce9d',
-    date: 'December 2023 - Current',
+    date: 'December 2023 - April 2024',
   },
   // {
-  //   title: 'Full Stack Developer',
-  //   company_name: 'Diversity Cyber Council',
-  //   icon: dcc,
-  //   iconBg: '#333333',
-  //   date: 'Sep 2022 - Present',
+  //   title: 'Software Engineer',
+  //   company_name: 'Snap Inc',
+  //   icon: snapchat,
+  //   iconBg: '#FFFC00',
+  //   date: 'August 2024 - Present',
   // },
 ];
 
@@ -271,4 +270,5 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { experiences, projects, services, technologies };
+
