@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { me, technology } from '../assets';
 import { styles } from '../styles';
-import { technology, me } from '../assets';
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           <div>
             <h1
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <span
                 className="sm:text-battleGray sm:text-[90px] 
                 text-eerieBlack text-[50px] font-mova
@@ -37,8 +37,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Computer Science Student
-              <br className="sm:block hidden" /> @ The University of Arizona
+              Software Engineer
+              <br className="sm:block hidden" /> @ Snap Inc.
             </p>
           </div>
           <div

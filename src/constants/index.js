@@ -18,6 +18,7 @@ import {
   python,
   reactjs,
   remotetasks,
+  snapchat,
   stl,
   sudoku,
   swift,
@@ -139,15 +140,15 @@ const experiences = [
     company_name: 'Remotetasks',
     icon: remotetasks,
     iconBg: '#35ce9d',
-    date: 'December 2023 - April 2024',
+    date: 'December 2023 - June 2024',
   },
-  // {
-  //   title: 'Software Engineer',
-  //   company_name: 'Snap Inc',
-  //   icon: snapchat,
-  //   iconBg: '#FFFC00',
-  //   date: 'August 2024 - Present',
-  // },
+  {
+    title: 'Software Engineer',
+    company_name: 'Snap Inc.',
+    icon: snapchat,
+    iconBg: '#FFFC00',
+    date: 'August 2024 - Present',
+  },
 ];
 
 const projects = [
