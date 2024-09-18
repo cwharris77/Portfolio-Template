@@ -39,13 +39,14 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-6xl leading-[30px]">
-          Having graduated with a double major in Computer Science and Information Science Technology and the Arts
-          from the University of Arizona, I possess comprehensive knowledge 
-          and skills focusing on web development and software engineering. Now working at Snap Inc., 
-          my proficiency continues to extend across several programming languages, including Java, 
-          Python, Javascript, Swift, and C. I have also gained experience building web applications 
-          using frameworks such as Express, React, Flask, and Django. Whether it&apos;s building RESTful APIs or 
-          crafting dynamic user interfaces, I bring a versatile skill set to the table.
+          As a full stack software engineer at Snap Inc. on the Business 
+          Experience team, I focus on building and maintaining end-to-end solutions 
+          that improve tools for businesses on the platform. I work on both front-end 
+          interfaces and back-end systems, ensuring that business partners and advertisers 
+          have a seamless and efficient experience. Collaborating closely with product managers, 
+          designers, and other engineering teams, I help deliver scalable, reliable, and 
+          high-performance features that optimize how businesses interact with Snap&apos;s 
+          services.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
