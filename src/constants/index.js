@@ -1,19 +1,19 @@
 import {
   IT,
   alien,
+  apollo,
   apple,
   aws,
   c,
   cloud,
-  css,
   cybertrip,
   docker,
+  emotion,
   express,
   frontend,
   git,
-  html,
+  graphql,
   java,
-  mongo,
   nodejs,
   python,
   reactjs,
@@ -63,22 +63,6 @@ const services = [
 
 const technologies = [
   {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'Mongo DB',
-    icon: mongo,
-  },
-  {
-    name: 'express',
-    icon: express,
-  },
-  {
     name: 'React JS',
     icon: reactjs,
   },
@@ -87,15 +71,31 @@ const technologies = [
     icon: nodejs,
   },
   {
+    name: 'Emotion JS',
+    icon: emotion,
+  },
+  {
+    name: 'GraphQL',
+    icon: graphql,
+  },
+  {
     name: 'TypeScript',
     icon: typescript,
   },
   {
-    name: 'docker',
+    name: 'Apollo Client',
+    icon: apollo,
+  },
+  {
+    name: 'Express JS',
+    icon: express,
+  },
+  {
+    name: 'Docker',
     icon: docker,
   },
   {
-    name: 'Python 3',
+    name: 'Python3',
     icon: python,
   },
   {
@@ -103,7 +103,7 @@ const technologies = [
     icon: java,
   },
   {
-    name: 'Swfit',
+    name: 'Swift',
     icon: swift,
   },
   {
@@ -111,11 +111,11 @@ const technologies = [
     icon: c,
   },
   {
-    name: 'git',
+    name: 'Git',
     icon: git,
   },
   {
-    name: 'aws',
+    name: 'AWS',
     icon: aws,
   },
 ];

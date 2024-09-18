@@ -1,12 +1,14 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
 import {
   Decal,
   Float,
+  Html,
   OrbitControls,
   Preload,
   useTexture,
 } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import PropTypes from 'prop-types';
+import React, { Suspense, useState } from 'react';
 import Loader from '../Loader';
 
 const Ball = (props) => {
@@ -35,17 +37,35 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, name }) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }} style={{ overflow: 'visible' }}>
       <Suspense fallback={<Loader />}>
         <OrbitControls enableZoom={false} position0={0} />
-        <Ball imgUrl={icon} />
+        <group
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)}
+        >
+          <Ball imgUrl={icon} />
+          {hovered && (
+            <Html>
+              <div className="technology-label">
+                {name}
+              </div>
+            </Html>
+          )}
+        </group>
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
+};
+
+BallCanvas.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default BallCanvas;
