@@ -39,7 +39,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-taupe text-[18px] max-w-6xl leading-[30px]">
-          As a full stack software engineer at Snap Inc. on the Business 
+          As a full-stack software engineer at Snap Inc. on the Business 
           Experience team, I focus on building and maintaining end-to-end solutions 
           that improve tools for businesses on the platform. I work on both front-end 
           interfaces and back-end systems, ensuring that business partners and advertisers 

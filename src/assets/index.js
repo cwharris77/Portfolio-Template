@@ -12,7 +12,7 @@ import logotext from './logo/logo-text-black.png';
 import me from './personal/profile.png';
 
 import apple from './icons/appleLogo.png';
-import backend from './icons/backend.png';
+import backend from './icons/backend2.png';
 import close from './icons/close.png';
 import cloud from './icons/cloudComputing.png';
 import download from './icons/download.png';
@@ -28,6 +28,7 @@ import prototyping from './icons/prototyping.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
+import uiux from './icons/ui-ux.png';
 import ux from './icons/ux.png';
 
 import apollo from './tech/apollo.png';
@@ -43,6 +44,7 @@ import graphql from './tech/graphql.png';
 import html from './tech/html.png';
 import java from './tech/java.png';
 import javascript from './tech/javascript.png';
+import jest from './tech/jest.png';
 import mongo from './tech/mongoDB.png';
 import nodejs from './tech/nodejs.png';
 import postgresql from './tech/postgresql.png';
@@ -77,10 +79,10 @@ import wiki from './projects/wikiracer.png';
 export {
   IT, alien, apollo, apple, aws, backend, bwmap, c, chars, close, cloud, coverhunt, css, cybertrip, dcc, docker, download,
   downloadHover, emotion, express, figma, frontend, git, github, graphql,
-  html, java, javascript, kelhel, komikult,
+  html, java, javascript, jest, kelhel, komikult,
   leaderboard, linkedin, logo,
   logotext, math, me, menu, microverse, mongo, movie, nairobi, nodejs, nyeusi, pineapple,
   pineappleHover, postgresql, prototyping, python, reactjs,
-  redux, remotetasks, resume, rubyrails, send, sendHover, snapchat, space, stl, sudoku, swift, tailwind, technology, typescript, uofa, ux, wave, whiteabstract, wiki, worldmap
+  redux, remotetasks, resume, rubyrails, send, sendHover, snapchat, space, stl, sudoku, swift, tailwind, technology, typescript, uiux, uofa, ux, wave, whiteabstract, wiki, worldmap
 };
 

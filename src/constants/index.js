@@ -1,19 +1,18 @@
 import {
-  IT,
   alien,
   apollo,
   apple,
   aws,
+  backend,
   c,
-  cloud,
   cybertrip,
-  docker,
   emotion,
   express,
   frontend,
   git,
   graphql,
   java,
+  jest,
   nodejs,
   python,
   reactjs,
@@ -24,6 +23,7 @@ import {
   swift,
   typescript,
   uofa,
+  ux,
   wiki
 } from '../assets';
 
@@ -44,20 +44,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Fullstack Web Development',
+    title: 'Front-End Engineering',
     icon: frontend,
   },
   {
-    title: 'Cloud Computing',
-    icon: cloud
+    title: 'UI/UX Design',
+    icon: ux
+  },
+  {
+    title: 'Back-End Engineering',
+    icon: backend,
   },
   {
     title: 'iOS Mobile Development',
     icon: apple,
-  },
-  {
-    title: 'IT Support',
-    icon: IT,
   },
 ];
 
@@ -67,52 +67,52 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'Emotion JS',
-    icon: emotion,
+    name: 'TypeScript',
+    icon: typescript,
   },
   {
     name: 'GraphQL',
     icon: graphql,
   },
   {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
     name: 'Apollo Client',
     icon: apollo,
   },
   {
-    name: 'Express JS',
-    icon: express,
-  },
-  {
-    name: 'Docker',
-    icon: docker,
-  },
-  {
-    name: 'Python3',
-    icon: python,
+    name: 'Jest',
+    icon: jest,
   },
   {
     name: 'Java',
     icon: java,
   },
   {
+    name: 'Emotion JS',
+    icon: emotion,
+  },
+  {
+    name: 'Git',
+    icon: git,
+  },
+  {
     name: 'Swift',
     icon: swift,
+  },
+  {
+    name: 'Express JS',
+    icon: express,
+  },
+  {
+    name: 'Python3',
+    icon: python,
   },
   {
     name: 'C',
     icon: c,
   },
   {
-    name: 'Git',
-    icon: git,
+    name: 'Node JS',
+    icon: nodejs,
   },
   {
     name: 'AWS',
