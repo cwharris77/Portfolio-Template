@@ -1,11 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { github, pineapple, pineappleHover } from '../assets';
-import { projects } from '../constants';
-import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import { info } from 'autoprefixer';
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 
 const InfoTile = (props) => {
     const [showInfo, setShowInfo] = useState(false);
@@ -51,5 +45,9 @@ const InfoTile = (props) => {
         </>
     )
 }
+InfoTile.propTypes = {
+    active: PropTypes.bool.isRequired,
+    info: PropTypes.string.isRequired,
+};
 
 export default InfoTile
