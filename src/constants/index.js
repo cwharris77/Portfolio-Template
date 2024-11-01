@@ -16,9 +16,9 @@ import {
   nodejs,
   python,
   reactjs,
+  reeldin,
   remotetasks,
   snapchat,
-  stl,
   sudoku,
   swift,
   typescript,
@@ -177,25 +177,25 @@ const projects = [
   },
   {
     id: 'project-2',
-    name: 'STL File Creator',
-    description: `A C program for creating and manipulating 3D scenes and exporting them to STL files in ASCII or binary format.`,
+    name: 'ReeldIn',
+    description: `A website dedicated to personally tailoring your movie selection experience! `,
     tags: [
       {
-        name: 'C',
+        name: 'Django',
         color: 'blue-text-gradient',
       },
       {
-        name: 'Data Structures',
+        name: 'PostgreSQL',
         color: 'green-text-gradient',
       },
       {
-        name: 'STL',
+        name: 'Web Development',
         color: 'pink-text-gradient',
       },
     ],
     info: "This project was accomplished as part of an Agile team",
-    image: stl,
-    repo: 'https://github.com/cwharris77/STL-Creator/tree/main',
+    image: reeldin,
+    repo: 'https://github.com/jonathanhouge/ReeldIn',
     demo: '',
   },
   {

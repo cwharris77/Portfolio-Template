@@ -56,33 +56,24 @@ import swift from './tech/swift.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 
-import coverhunt from './company/coverhunt.png';
-import dcc from './company/dcc.png';
-import kelhel from './company/kelhel.png';
-import microverse from './company/microverse.png';
 import remotetasks from './company/remotetasks.png';
 import snapchat from './company/snapchat.png';
 import uofa from './company/uofa.png';
 
 import alien from './projects/alieninvasion.gif';
 import cybertrip from './projects/cybertrip.png';
-import komikult from './projects/komikult.png';
-import leaderboard from './projects/leaderboard.png';
-import math from './projects/math-magicians.png';
-import movie from './projects/movie-metro.png';
-import nyeusi from './projects/nyeusi.png';
-import space from './projects/space-hub.png';
+import reeldin from './projects/reeldin.png';
 import stl from './projects/stl.png';
 import sudoku from './projects/sudoku.png';
 import wiki from './projects/wikiracer.png';
 
 export {
-  IT, alien, apollo, apple, aws, backend, bwmap, c, chars, close, cloud, coverhunt, css, cybertrip, dcc, docker, download,
+  IT, alien, apollo, apple, aws, backend, bwmap, c, chars, close, cloud, css, cybertrip, docker, download,
   downloadHover, emotion, express, figma, frontend, git, github, graphql,
-  html, java, javascript, jest, kelhel, komikult,
-  leaderboard, linkedin, logo,
-  logotext, math, me, menu, microverse, mongo, movie, nairobi, nodejs, nyeusi, pineapple,
+  html, java, javascript, jest,
+  linkedin, logo,
+  logotext, me, menu, mongo, nairobi, nodejs, pineapple,
   pineappleHover, postgresql, prototyping, python, reactjs,
-  redux, remotetasks, resume, rubyrails, send, sendHover, snapchat, space, stl, sudoku, swift, tailwind, technology, typescript, uiux, uofa, ux, wave, whiteabstract, wiki, worldmap
+  redux, reeldin, remotetasks, resume, rubyrails, send, sendHover, snapchat, stl, sudoku, swift, tailwind, technology, typescript, uiux, uofa, ux, wave, whiteabstract, wiki, worldmap
 };
 

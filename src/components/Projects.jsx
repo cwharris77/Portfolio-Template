@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { github } from '../assets';
 import { projects } from '../constants';
-import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import InfoTile from './MoreInfo';
+import { SectionWrapper } from '../hoc';
+import { styles } from '../styles';
+import { fadeIn, staggerContainer, textVariant } from '../utils/motion';
 
 const ProjectCard = ({
   id,
@@ -121,9 +121,24 @@ const ProjectCard = ({
     </motion.div>
   );
 };
+ProjectCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  image: PropTypes.string.isRequired,
+  repo: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  active: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 const Projects = () => {
-  const [active, setActive] = useState('project-1');
+  const [active, setActive] = useState('project-2');
 
   return (
     <div className="-mt-[9rem]">
@@ -166,4 +181,5 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, 'projects');
+const WrappedProjects = SectionWrapper(Projects, 'projects');
+export default WrappedProjects;
