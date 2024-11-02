@@ -1,10 +1,10 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { styles } from '../styles';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
+import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 import { send, sendHover } from '../assets';
+import { SectionWrapper } from '../hoc';
+import { styles } from '../styles';
+import { slideIn } from '../utils/motion';
 
 const Contact = () => {
   const formRef = useRef();
@@ -38,7 +38,7 @@ const Contact = () => {
           to_email: 'cwharris365@gmail.com', //put your email here.
           message: form.message,
         },
-        'dRXoVv9-LNU1JU2Zy' //paste your Public Key here. You'll get it in your profile section.
+        '3plXucd1HHdBa-kMX' //paste your Public Key here. You'll get it in your profile section.
       )
       .then(
         () => {
