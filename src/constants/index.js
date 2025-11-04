@@ -4,15 +4,15 @@ import {
   apple,
   aws,
   backend,
-  c,
   cybertrip,
   emotion,
-  express,
   frontend,
   git,
   graphql,
   java,
   jest,
+  mongodb,
+  nextjs,
   nodejs,
   python,
   reactjs,
@@ -20,11 +20,11 @@ import {
   remotetasks,
   snapchat,
   sudoku,
-  swift,
+  tailwind,
+  trends,
   typescript,
   uofa,
   ux,
-  wiki,
 } from "../assets";
 
 export const navLinks = [
@@ -83,10 +83,6 @@ const technologies = [
     icon: jest,
   },
   {
-    name: "Java",
-    icon: java,
-  },
-  {
     name: "Emotion JS",
     icon: emotion,
   },
@@ -95,20 +91,24 @@ const technologies = [
     icon: git,
   },
   {
-    name: "Swift",
-    icon: swift,
+    name: "Java",
+    icon: java,
   },
   {
-    name: "Express JS",
-    icon: express,
+    name: "Next.js",
+    icon: nextjs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
     name: "Python3",
     icon: python,
   },
   {
-    name: "C",
-    icon: c,
+    name: "MongoDB",
+    icon: mongodb,
   },
   {
     name: "Node JS",
@@ -154,26 +154,30 @@ const experiences = [
 const projects = [
   {
     id: "project-1",
-    name: "CyberTRIP",
+    name: "Replay Radar",
     description:
-      "A web-based tool designed to simplify cybersecurity incident tracking, management, and prioritization in real time.",
+      "A site to help you visualize your top artists, tracks, and trends from Spotify. Discover your musical identity across time.",
     tags: [
       {
-        name: "Flask",
-        color: "white",
+        name: "Next.js",
+        color: "blue-text-gradient",
       },
       {
-        name: "MongoDB",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "Web Development",
+        name: "MongoDB",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
         color: "pink-text-gradient",
       },
     ],
     info: "",
-    image: cybertrip,
-    repo: "https://github.com/cwharris77/cyberTRIP",
+    image: trends,
+    repo: "https://github.com/cwharris77/replay-radar",
     demo: "",
   },
   {
@@ -201,6 +205,30 @@ const projects = [
   },
   {
     id: "project-3",
+    name: "CyberTRIP",
+    description:
+      "A web-based tool designed to simplify cybersecurity incident tracking, management, and prioritization in real time.",
+    tags: [
+      {
+        name: "Flask",
+        color: "white",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Web Development",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "",
+    image: cybertrip,
+    repo: "https://github.com/cwharris77/cyberTRIP",
+    demo: "",
+  },
+  {
+    id: "project-4",
     name: "Alien Invasion",
     description:
       "A version of the classic Alien Invasion game created using pygame.",
@@ -224,7 +252,7 @@ const projects = [
     demo: "https://cwharris77.github.io/Alien-Invasion/",
   },
   {
-    id: "project-4",
+    id: "project-5",
     name: "Sudoku",
     description: "A Sudoku game built as part of an Agile team using JavaFX",
     tags: [
@@ -244,30 +272,6 @@ const projects = [
     info: "",
     image: sudoku,
     repo: "https://github.com/cwharris77/sudoku/tree/55886c9c5e931ae58ac5a63fc34a648056593e31/team-project-segfault",
-    demo: "",
-  },
-  {
-    id: "project-5",
-    name: "Wiki Racer",
-    description:
-      "An implementation of the Wiki Ladder game where the challenge is to navigate from a designated start Wikipedia page to a predetermined end page using only hyperlinks within the articles in the quickest time.",
-    tags: [
-      {
-        name: "Java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Memoization",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Multi-Threading",
-        color: "pink-text-gradient",
-      },
-    ],
-    info: "",
-    image: wiki,
-    repo: "https://github.com/cwharris77/WikiRacer",
     demo: "",
   },
 ];
