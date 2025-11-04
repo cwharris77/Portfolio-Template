@@ -45,8 +45,7 @@ import html from "./tech/html.png";
 import java from "./tech/java.png";
 import javascript from "./tech/javascript.png";
 import jest from "./tech/jest.png";
-import mongo from "./tech/mongoDB.png";
-import mongodb from "./tech/mongodb.png";
+import mongodb from "./tech/mongoDB.png";
 import nextjs from "./tech/nextjs.png";
 import nodejs from "./tech/nodejs.png";
 import postgresql from "./tech/postgresql.png";
@@ -103,7 +102,6 @@ export {
   logotext,
   me,
   menu,
-  mongo,
   mongodb,
   nairobi,
   nextjs,
