@@ -63,6 +63,7 @@ import uofa from "./company/uofa.png";
 
 import alien from "./projects/alieninvasion.gif";
 import cybertrip from "./projects/cybertrip.png";
+import nextview from "./projects/nextview.png";
 import reeldin from "./projects/reeldin.png";
 import stl from "./projects/stl.png";
 import sudoku from "./projects/sudoku.png";
@@ -105,6 +106,7 @@ export {
   mongodb,
   nairobi,
   nextjs,
+  nextview,
   nodejs,
   pineapple,
   pineappleHover,

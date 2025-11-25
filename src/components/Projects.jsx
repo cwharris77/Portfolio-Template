@@ -13,6 +13,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
+  demo,
   repo,
   index,
   active,
@@ -54,30 +55,44 @@ const ProjectCard = ({
       ) : (
         <>
           <div
-            className='absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(126,122,122,0.7)] rounded-b-[24px] z-20'
+            className='absolute bottom-0 p-4 justify-start w-full 
+            flex-col bg-[rgba(126,122,122,0.7)] rounded-b-[24px] z-20 gap-8'
           >
-            <div className='absolute inset-0 flex justify-end m-3'>
-              <div
-                onClick={() => window.open(repo, "_blank")}
-                className='bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]'
+            <div className=' flex justify-between'>
+              <h2
+                className='font-bold sm:text-[2rem] text-[1.5rem] 
+              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]'
               >
-                <img
-                  src={github}
-                  alt='source code'
-                  className='w-4/5 h-4/5 object-contain'
-                />
+                {name}
+              </h2>
+              <div id='project-buttons' className='flex gap-2'>
+                <div
+                  onClick={() => window.open(repo, "_blank")}
+                  className='bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
+                  flex justify-center items-center cursor-pointer
+                  sm:opacity-[0.9] opacity-[0.8] hover:bg-battleGray'
+                >
+                  <img
+                    src={github}
+                    alt='source code'
+                    className='w-4/5 h-4/5 object-contain'
+                  />
+                </div>
+
+                {demo && (
+                  <button
+                    onClick={() => window.open(demo, "_blank")}
+                    className='bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-md
+                  flex justify-center items-center cursor-pointer
+                  sm:opacity-[0.9] opacity-[0.8] hover:bg-battleGray px-8 sm:text-[16px] text-[14px] text-timberWolf 
+              font-bold font-beckman'
+                  >
+                    DEMO
+                  </button>
+                )}
               </div>
             </div>
 
-            <h2
-              className='font-bold sm:text-[2rem] text-[1.5rem] 
-              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]'
-            >
-              {name}
-            </h2>
             <p
               className='text-white sm:text-[1rem] text-[.9rem] 
               max-w-3xl sm:leading-[24px] leading-[18px]
@@ -167,10 +182,12 @@ const Projects = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]'
         >
-          These projects demonstrate my expertise with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories with demos. They showcase my ability to tackle intricate
-          challenges, adapt to various technologies, and work as part of a team.
+          These projects highlight my hands-on experience across the full web
+          development stack. Each example includes links to source code which
+          has a longer description and some have demos. Together, they
+          demonstrate my ability to design scalable features, solve complex
+          technical challenges, and collaborate effectively in real-world
+          engineering environments.
         </motion.p>
       </div>
 
