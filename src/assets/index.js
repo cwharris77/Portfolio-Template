@@ -33,12 +33,16 @@ import ux from "./icons/ux.png";
 
 import apollo from "./tech/apollo.png";
 import aws from "./tech/aws.png";
+import azure from "./tech/azure.webp";
 import c from "./tech/c.png";
 import css from "./tech/css.png";
+import django from "./tech/django.png";
 import docker from "./tech/docker.png";
 import emotion from "./tech/emotion.png";
 import express from "./tech/expressjs.png";
 import figma from "./tech/figma.png";
+import flask from "./tech/flask.png";
+import gcp from "./tech/gcp.webp";
 import git from "./tech/git.png";
 import graphql from "./tech/graphql.png";
 import html from "./tech/html.png";
@@ -75,6 +79,7 @@ export {
   apollo,
   apple,
   aws,
+  azure,
   backend,
   bwmap,
   c,
@@ -83,13 +88,16 @@ export {
   cloud,
   css,
   cybertrip,
+  django,
   docker,
   download,
   downloadHover,
   emotion,
   express,
   figma,
+  flask,
   frontend,
+  gcp,
   git,
   github,
   graphql,

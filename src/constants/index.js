@@ -3,10 +3,14 @@ import {
   apollo,
   apple,
   aws,
+  azure,
   backend,
   cybertrip,
+  django,
   emotion,
+  flask,
   frontend,
+  gcp,
   git,
   graphql,
   java,
@@ -118,6 +122,19 @@ const technologies = [
     name: "AWS",
     icon: aws,
   },
+  {
+    name: "Microsoft Azure",
+    icon: azure,
+  },
+  {
+    name: "Google Cloud Platform",
+    icon: gcp,
+  },
+  {
+    name: "Django",
+    icon: django,
+  },
+  { name: "Flask", icon: flask },
 ];
 
 const experiences = [
