@@ -6,9 +6,7 @@ import {
   azure,
   backend,
   cybertrip,
-  django,
   emotion,
-  flask,
   frontend,
   gcp,
   git,
@@ -130,11 +128,6 @@ const technologies = [
     name: "Google Cloud Platform",
     icon: gcp,
   },
-  {
-    name: "Django",
-    icon: django,
-  },
-  { name: "Flask", icon: flask },
 ];
 
 const experiences = [

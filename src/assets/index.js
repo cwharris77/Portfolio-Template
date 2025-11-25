@@ -59,7 +59,7 @@ import redux from "./tech/redux.png";
 import rubyrails from "./tech/rubyrails.png";
 import swift from "./tech/swift.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
+import typescript from "./tech/typescript.jpeg";
 
 import remotetasks from "./company/remotetasks.png";
 import snapchat from "./company/snapchat.png";
