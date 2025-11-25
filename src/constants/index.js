@@ -13,13 +13,13 @@ import {
   jest,
   mongodb,
   nextjs,
+  nextview,
   nodejs,
   python,
   reactjs,
   reeldin,
   remotetasks,
   snapchat,
-  sudoku,
   tailwind,
   trends,
   typescript,
@@ -156,7 +156,7 @@ const projects = [
     id: "project-1",
     name: "Replay Radar",
     description:
-      "A site to help you visualize your top artists, tracks, and trends from Spotify. Discover your musical identity across time.",
+      "Visualize your top artists, tracks, and trends from Spotify. Discover your musical identity across time.",
     tags: [
       {
         name: "Next.js",
@@ -178,13 +178,48 @@ const projects = [
     info: "",
     image: trends,
     repo: "https://github.com/cwharris77/replay-radar",
-    demo: "",
+    demo: "https://replay-radar.vercel.app/",
   },
   {
     id: "project-2",
+    name: "NextView",
+    description: "A small scale YouTube clone",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GCP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Docker",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "",
+    image: nextview,
+    repo: "https://github.com/cwharris77/nextview",
+    demo: "https://next-view-web-client-219398653361.us-west1.run.app/",
+  },
+  {
+    id: "project-3",
     name: "ReeldIn",
     description: `A website dedicated to personally tailoring your movie selection experience! `,
     tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
       {
         name: "Django",
         color: "blue-text-gradient",
@@ -194,7 +229,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "Web Development",
+        name: "Azure",
         color: "pink-text-gradient",
       },
     ],
@@ -204,11 +239,15 @@ const projects = [
     demo: "",
   },
   {
-    id: "project-3",
+    id: "project-4",
     name: "CyberTRIP",
     description:
       "A web-based tool designed to simplify cybersecurity incident tracking, management, and prioritization in real time.",
     tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
       {
         name: "Flask",
         color: "white",
@@ -228,13 +267,13 @@ const projects = [
     demo: "",
   },
   {
-    id: "project-4",
+    id: "project-5",
     name: "Alien Invasion",
     description:
       "A version of the classic Alien Invasion game created using pygame.",
     tags: [
       {
-        name: "Python3",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
@@ -250,29 +289,6 @@ const projects = [
     image: alien,
     repo: "https://github.com/cwharris77/Alien-Invasion",
     demo: "https://cwharris77.github.io/Alien-Invasion/",
-  },
-  {
-    id: "project-5",
-    name: "Sudoku",
-    description: "A Sudoku game built as part of an Agile team using JavaFX",
-    tags: [
-      {
-        name: "Java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaFX",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MVC",
-        color: "pink-text-gradient",
-      },
-    ],
-    info: "",
-    image: sudoku,
-    repo: "https://github.com/cwharris77/sudoku/tree/55886c9c5e931ae58ac5a63fc34a648056593e31/team-project-segfault",
-    demo: "",
   },
 ];
 
