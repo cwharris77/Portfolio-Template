@@ -64,6 +64,7 @@ import typescript from "./tech/typescript.jpeg";
 import remotetasks from "./company/remotetasks.png";
 import snapchat from "./company/snapchat.png";
 import uofa from "./company/uofa.png";
+import x from "./company/x.jpg";
 
 import alien from "./projects/alieninvasion.gif";
 import cybertrip from "./projects/cybertrip.png";
@@ -144,4 +145,5 @@ export {
   whiteabstract,
   wiki,
   worldmap,
+  x,
 };
