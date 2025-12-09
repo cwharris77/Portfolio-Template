@@ -6,6 +6,7 @@ import {
   azure,
   backend,
   cybertrip,
+  diffdragon,
   emotion,
   frontend,
   gcp,
@@ -299,6 +300,29 @@ const projects = [
     image: alien,
     repo: "https://github.com/cwharris77/Alien-Invasion",
     demo: "https://cwharris77.github.io/Alien-Invasion/",
+  },
+  {
+    id: "project-6",
+    name: "DiffDragon",
+    description: "A PR review bot built using Nest.js and the OpenAI API.",
+    tags: [
+      {
+        name: "Nest.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenAI API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "GitHub API",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "",
+    image: diffdragon,
+    repo: "https://github.com/cwharris77/pr-review-bot",
+    demo: "",
   },
 ];
 

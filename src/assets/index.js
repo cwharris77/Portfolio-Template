@@ -68,6 +68,7 @@ import x from "./company/x.jpg";
 
 import alien from "./projects/alieninvasion.gif";
 import cybertrip from "./projects/cybertrip.png";
+import diffdragon from "./projects/diffdragon.png";
 import nextview from "./projects/nextview.png";
 import reeldin from "./projects/reeldin.png";
 import stl from "./projects/stl.png";
@@ -89,6 +90,7 @@ export {
   cloud,
   css,
   cybertrip,
+  diffdragon,
   django,
   docker,
   download,
