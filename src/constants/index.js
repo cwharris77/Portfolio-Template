@@ -157,7 +157,7 @@ const experiences = [
     company_name: "Snap Inc.",
     icon: snapchat,
     iconBg: "#FFFC00",
-    date: "August 2024 - June 2025",
+    date: "August 2024 - July 2025",
   },
 ];
 
