@@ -6,6 +6,13 @@ import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, staggerContainer, textVariant } from "../utils/motion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 
 const ProjectCard = ({
   id,
@@ -198,16 +205,50 @@ const Projects = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <div className='mt-[55px] flex lg:flex-row flex-col lg:min-h-[70vh] min-h-[90vh] sm:gap-4 gap-4'>
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              index={index}
-              {...project}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
+        <div className='mt-[55px]'>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className='w-full'
+          >
+            <CarouselContent>
+              {Array.from({ length: Math.ceil(projects.length / 5) }).map(
+                (_, chunkIndex) => (
+                  <CarouselItem key={chunkIndex}>
+                    <div className='flex lg:flex-row flex-col lg:min-h-[70vh] min-h-[90vh] sm:gap-4 gap-4'>
+                      {projects
+                        .slice(chunkIndex * 5, (chunkIndex + 1) * 5)
+                        .map((project, index) => (
+                          <ProjectCard
+                            key={project.id}
+                            index={chunkIndex * 5 + index}
+                            {...project}
+                            active={active}
+                            handleClick={setActive}
+                          />
+                        ))}
+                      {/* Add placeholders to maintain flex layout on desktop */}
+                      {Array.from({
+                        length:
+                          5 -
+                          projects.slice(chunkIndex * 5, (chunkIndex + 1) * 5)
+                            .length,
+                      }).map((_, i) => (
+                        <div
+                          key={`placeholder-${i}`}
+                          className='lg:flex-[0.5] flex-[2] min-w-[170px]'
+                        />
+                      ))}
+                    </div>
+                  </CarouselItem>
+                )
+              )}
+            </CarouselContent>
+            <CarouselPrevious className='-left-4 lg:-left-12' />
+            <CarouselNext className='-right-4 lg:-right-12' />
+          </Carousel>
         </div>
       </motion.div>
     </div>
