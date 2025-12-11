@@ -23,11 +23,14 @@ import {
   reeldin,
   remotetasks,
   snapchat,
+  stl,
+  sudoku,
   tailwind,
   trends,
   typescript,
   uofa,
   ux,
+  wiki,
 } from "../assets";
 
 export const navLinks = [
@@ -194,7 +197,7 @@ const projects = [
   {
     id: "project-2",
     name: "NextView",
-    description: "A small scale YouTube clone",
+    description: "A small scale YouTube clone.",
     tags: [
       {
         name: "Next.js",
@@ -251,6 +254,34 @@ const projects = [
   },
   {
     id: "project-4",
+    name: "DiffDragon",
+    description:
+      "An AI-powered GitHub app that automatically reviews pull requests, suggests improvements, and enhances code quality through intelligent, continuous analysis.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Nest.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenAI API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "GitHub App",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "",
+    image: diffdragon,
+    repo: "https://github.com/cwharris77/pr-review-bot",
+    demo: "",
+  },
+  {
+    id: "project-5",
     name: "CyberTRIP",
     description:
       "A web-based tool designed to simplify cybersecurity incident tracking, management, and prioritization in real time.",
@@ -278,7 +309,7 @@ const projects = [
     demo: "",
   },
   {
-    id: "project-5",
+    id: "project-6",
     name: "Alien Invasion",
     description:
       "A version of the classic Alien Invasion game created using pygame.",
@@ -302,26 +333,73 @@ const projects = [
     demo: "https://cwharris77.github.io/Alien-Invasion/",
   },
   {
-    id: "project-6",
-    name: "DiffDragon",
-    description: "A PR review bot built using Nest.js and the OpenAI API.",
+    id: "project-7",
+    name: "Sudoku",
+    description: "A Sudoku game built as part of an Agile team using JavaFX",
     tags: [
       {
-        name: "Nest.js",
+        name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "OpenAI API",
+        name: "JavaFX",
         color: "green-text-gradient",
       },
       {
-        name: "GitHub API",
+        name: "MVC",
         color: "pink-text-gradient",
       },
     ],
     info: "",
-    image: diffdragon,
-    repo: "https://github.com/cwharris77/pr-review-bot",
+    image: sudoku,
+    repo: "https://github.com/cwharris77/sudoku",
+    demo: "",
+  },
+  {
+    id: "project-8",
+    name: "Wiki Racer",
+    description:
+      "An implementation of the Wiki Ladder game where the challenge is to navigate from a designated start Wikipedia page to a predetermined end page using only hyperlinks within the articles in the quickest time.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Memoization",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Multi-Threading",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "",
+    image: wiki,
+    repo: "https://github.com/cwharris77/WikiRacer",
+    demo: "",
+  },
+  {
+    id: "project-9",
+    name: "STL File Creator",
+    description: `A C program for creating and manipulating 3D scenes and exporting them to STL files in ASCII or binary format.`,
+    tags: [
+      {
+        name: "C",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Data Structures",
+        color: "green-text-gradient",
+      },
+      {
+        name: "STL",
+        color: "pink-text-gradient",
+      },
+    ],
+    info: "This project was accomplished as part of an Agile team",
+    image: stl,
+    repo: "https://github.com/cwharris77/STL-Creator",
     demo: "",
   },
 ];
