@@ -11,10 +11,12 @@ import logotext from "./logo/logo-text-black.png";
 
 import me from "./personal/profile.png";
 
+import ai from "./icons/ai.png";
 import apple from "./icons/appleLogo.png";
 import backend from "./icons/backend2.png";
 import close from "./icons/close.png";
 import cloud from "./icons/cloudComputing.png";
+import db from "./icons/db.png";
 import download from "./icons/download.png";
 import downloadHover from "./icons/downloadHover.png";
 import frontend from "./icons/frontend.png";
@@ -77,6 +79,7 @@ import trends from "./projects/trends.png";
 import wiki from "./projects/wikiracer.png";
 
 export {
+  ai,
   alien,
   apollo,
   apple,
@@ -90,6 +93,7 @@ export {
   cloud,
   css,
   cybertrip,
+  db,
   diffdragon,
   django,
   docker,

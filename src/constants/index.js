@@ -1,11 +1,12 @@
 import {
+  ai,
   alien,
   apollo,
-  apple,
   aws,
   azure,
-  backend,
+  cloud,
   cybertrip,
+  db,
   diffdragon,
   emotion,
   frontend,
@@ -29,7 +30,6 @@ import {
   trends,
   typescript,
   uofa,
-  ux,
   wiki,
 } from "../assets";
 
@@ -50,20 +50,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Front-End Engineering",
+    title: "Front End",
     icon: frontend,
   },
   {
-    title: "UI/UX Design",
-    icon: ux,
+    title: "Back End",
+    icon: db,
   },
   {
-    title: "Back-End Engineering",
-    icon: backend,
+    title: "DevOps & Cloud Deployment",
+    icon: cloud,
   },
   {
-    title: "iOS Mobile Development",
-    icon: apple,
+    title: "AI Integration",
+    icon: ai,
   },
 ];
 

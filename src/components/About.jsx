@@ -40,7 +40,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-taupe text-[18px] max-w-6xl leading-[30px]'
       >
-        As a former full-stack software engineer at Snap Inc. on the Business
+        As a former full stack software engineer at Snap Inc. on the Business
         Experience team, I focused on building and maintaining end-to-end
         solutions that improved tools for businesses on the platform. I worked
         on both front-end interfaces and back-end systems, ensuring that
@@ -51,7 +51,7 @@ const About = () => {
         Snap&#39;s services.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
