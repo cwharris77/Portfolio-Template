@@ -84,7 +84,7 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-14 mt-2'>
+        <ul className='list-none hidden md:flex flex-row gap-2 md:gap-4 lg:gap-14 mt-2'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -100,7 +100,7 @@ const Navbar = () => {
         </ul>
 
         {/* mobile */}
-        <div className='sm:hidden flex flex-1 w-screen justify-end items-center'>
+        <div className='md:hidden flex flex-1 w-screen justify-end items-center'>
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.98] absolute 
