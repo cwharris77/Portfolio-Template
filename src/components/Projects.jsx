@@ -223,7 +223,7 @@ const Projects = () => {
                         .map((project, index) => (
                           <ProjectCard
                             key={project.id}
-                            index={chunkIndex * 5 + index}
+                            index={index}
                             {...project}
                             active={active}
                             handleClick={setActive}
