@@ -8,11 +8,11 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import PropTypes from "prop-types";
-import React, { Suspense, useState } from "react";
+import { Suspense, useState } from "react";
 import Loader from "../Loader";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+const Ball = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl]);
 
   return (
     <Float speed={2.5} rotationIntensity={1} floatIntensity={2}>
@@ -35,6 +35,10 @@ const Ball = (props) => {
       </mesh>
     </Float>
   );
+};
+
+Ball.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
 };
 
 const BallCanvas = ({ icon, name }) => {

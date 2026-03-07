@@ -18078,13 +18078,11 @@ define("ace/ace", [
         .css({ position: "relative" })
         .addClass(opts.splitterClass)
         .attr("data-splitter-initialized", true);
-      var panes = $(">*", splitter[0])
-        .addClass(opts.paneClass)
-        .css({
-          position: "absolute",
-          "z-index": "1",
-          "-moz-outline-style": "none",
-        });
+      var panes = $(">*", splitter[0]).addClass(opts.paneClass).css({
+        position: "absolute",
+        "z-index": "1",
+        "-moz-outline-style": "none",
+      });
       var A = $(panes[0]),
         B = $(panes[1]);
       opts.dockPane = opts.dock && (/right|bottom/.test(opts.dock) ? B : A);
