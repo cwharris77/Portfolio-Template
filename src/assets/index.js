@@ -63,6 +63,7 @@ import swift from "./tech/swift.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.jpeg";
 
+import rallyboard from "./company/rallyboard.jpeg";
 import remotetasks from "./company/remotetasks.png";
 import snapchat from "./company/snapchat.png";
 import uofa from "./company/uofa.png";
@@ -128,6 +129,7 @@ export {
   postgresql,
   prototyping,
   python,
+  rallyboard,
   reactjs,
   redux,
   reeldin,

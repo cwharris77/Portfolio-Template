@@ -20,6 +20,7 @@ import {
   nextview,
   nodejs,
   python,
+  rallyboard,
   reactjs,
   reeldin,
   remotetasks,
@@ -162,6 +163,13 @@ const experiences = [
     icon: snapchat,
     iconBg: "#FFFC00",
     date: "August 2024 - July 2025",
+  },
+  {
+    title: "Software Engineer",
+    company_name: "RallyBoard",
+    icon: rallyboard,
+    iconBg: "#025181",
+    date: "January 2026 - Present",
   },
 ];
 
