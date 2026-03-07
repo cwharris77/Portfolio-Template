@@ -5,16 +5,16 @@ import { styles } from "../styles";
 const Hero = () => {
   return (
     <>
-      <div className='absolute top-0 left-0 z-0 h-[100vh] w-screen'>
+      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
           src={technology}
-          alt='world map'
-          className='w-full h-full sm:block hidden object-cover'
+          alt="world map"
+          className="w-full h-full sm:block hidden object-cover"
         />
       </div>
       <section
-        className='relative flex sm:flex-row flex-col w-full h-screen mx-auto 
-        sm:bg-hero bg-hero-mobile overflow-x-hidden touch-pan-y'
+        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
+        sm:bg-hero bg-hero-mobile overflow-x-hidden touch-pan-y"
       >
         <div
           className={`absolute inset-0 sm:top-[250px] top-[150px] 
@@ -28,9 +28,9 @@ const Hero = () => {
             >
               Hi, I&apos;m{" "}
               <span
-                className='sm:text-battleGray sm:text-[90px] 
+                className="sm:text-battleGray sm:text-[90px] 
                 text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase'
+                font-extrabold uppercase"
               >
                 Cooper
               </span>
@@ -40,22 +40,22 @@ const Hero = () => {
             </p>
           </div>
           <div
-            className='w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4'
+            className="w-screen flex flex-col items-start 
+            justify-center sm:-ml-[3rem] xxs:mt-4"
           ></div>
 
           <div></div>
         </div>
 
         <div
-          className='absolute xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center'
+          className="absolute xs:bottom-10 bottom-32 w-full 
+          flex justify-center items-center"
         >
-          <a href='#about'>
+          <a href="#about">
             <div
-              className='w-[35px] h-[64px] rounded-3xl border-4 
+              className="w-[35px] h-[64px] rounded-3xl border-4 
             border-french flex
-            justify-center items-start p-2'
+            justify-center items-start p-2"
             >
               <motion.div
                 animate={{
@@ -66,7 +66,7 @@ const Hero = () => {
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
-                className='w-3 h-3 rounded-full bg-taupe mb-1'
+                className="w-3 h-3 rounded-full bg-taupe mb-1"
               />
             </div>
           </a>
@@ -75,11 +75,11 @@ const Hero = () => {
         {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
         <div>
           <img
-            className='absolute bottom-[5%] right-[5%] 
+            className="absolute bottom-[5%] right-[5%] 
             h-[20%] sm:h-[25%] md:h-[30%] lg:h-[35%] xl:h-[55%] 2xl:h-[60%]
-            w-auto object-contain'
+            w-auto object-contain"
             src={me}
-            alt='Cooper'
+            alt="Cooper"
           />
         </div>
       </section>

@@ -13,10 +13,10 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-2 fixed 
       top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}
     >
-      <div className='w-full flex justify-between items-center max-w-9xl mx-auto'>
+      <div className="w-full flex justify-between items-center max-w-9xl mx-auto">
         <Link
-          to='/'
-          className='flex items-center gap-2'
+          to="/"
+          className="flex items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -24,8 +24,8 @@ const Navbar = () => {
         >
           <img
             src={logo} // your logo comes here
-            alt='logo'
-            className='sm:w-[70px] sm:h-[60px] w-[45px] h-[45px] object-contain'
+            alt="logo"
+            className="sm:w-[70px] sm:h-[60px] w-[45px] h-[45px] object-contain"
           />
 
           {/* if you have text you want besides your logo it comes here.
@@ -40,17 +40,17 @@ const Navbar = () => {
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/cooper-harris77/",
-                "_blank"
+                "_blank",
               )
             }
-            className='bg-none sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+            className="bg-none sm:w-12 sm:h-12 w-10 h-10 rounded-full 
               flex justify-center items-center cursor-pointer
-              sm:opacity-[0.9] opacity-[0.8]'
+              sm:opacity-[0.9] opacity-[0.8]"
           >
             <img
               src={linkedin}
-              alt='Linkedin Link'
-              className='object-contain rounded-full'
+              alt="Linkedin Link"
+              className="object-contain rounded-full"
             />
           </div>
           {/* Github */}
@@ -58,14 +58,14 @@ const Navbar = () => {
             onClick={() =>
               window.open("https://github.com/cwharris77", "_blank")
             }
-            className='bg-night sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+            className="bg-night sm:w-12 sm:h-12 w-10 h-10 rounded-full 
               flex justify-center items-center cursor-pointer
-              sm:opacity-[0.9] opacity-[0.8]'
+              sm:opacity-[0.9] opacity-[0.8]"
           >
             <img
               src={github}
-              alt='Github Link'
-              className='object-contain rounded-full w-4/5 h-4/5'
+              alt="Github Link"
+              className="object-contain rounded-full w-4/5 h-4/5"
             />
           </div>
           {/* Twitter */}
@@ -73,18 +73,18 @@ const Navbar = () => {
             onClick={() =>
               window.open("https://x.com/cooper_harris77", "_blank")
             }
-            className='bg-black sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+            className="bg-black sm:w-12 sm:h-12 w-10 h-10 rounded-full 
               flex justify-center items-center cursor-pointer
-              sm:opacity-[0.9] opacity-[0.8]'
+              sm:opacity-[0.9] opacity-[0.8]"
           >
             <img
               src={x}
-              alt='X formerly TwitterLink'
-              className='object-contain rounded-full w-4/5 h-4/5'
+              alt="X formerly TwitterLink"
+              className="object-contain rounded-full w-4/5 h-4/5"
             />
           </div>
         </Link>
-        <ul className='list-none hidden md:flex flex-row gap-2 md:gap-4 lg:gap-14 mt-2'>
+        <ul className="list-none hidden md:flex flex-row gap-2 md:gap-4 lg:gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -100,7 +100,7 @@ const Navbar = () => {
         </ul>
 
         {/* mobile */}
-        <div className='md:hidden flex flex-1 w-screen justify-end items-center'>
+        <div className="md:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.98] absolute 
@@ -108,17 +108,17 @@ const Navbar = () => {
                   toggle ? "menu-open" : "menu-close"
                 }`}
             >
-              <div className='flex justify-end'>
+              <div className="flex justify-end">
                 <img
                   src={close}
-                  alt='close'
-                  className='w-[22px] h-[22px] object-contain cursor-pointer'
+                  alt="close"
+                  className="w-[22px] h-[22px] object-contain cursor-pointer"
                   onClick={() => setToggle(!toggle)}
                 />
               </div>
               <ul
-                className='list-none flex flex-col gap-[10rem]
-                items-start justify-end mt-[6rem]'
+                className="list-none flex flex-col gap-[10rem]
+                items-start justify-end mt-[6rem]"
               >
                 {navLinks.map((nav) => (
                   <li
@@ -147,8 +147,8 @@ const Navbar = () => {
           ) : (
             <img
               src={menu}
-              alt='menu'
-              className='w-[34px] h-[34px] object-contain cursor-pointer'
+              alt="menu"
+              className="w-[34px] h-[34px] object-contain cursor-pointer"
               onClick={() => setToggle(!toggle)}
             />
           )}

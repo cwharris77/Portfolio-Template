@@ -5,11 +5,11 @@ import {
   OrbitControls,
   Preload,
   useTexture,
-} from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import PropTypes from 'prop-types';
-import React, { Suspense, useState } from 'react';
-import Loader from '../Loader';
+} from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import PropTypes from "prop-types";
+import React, { Suspense, useState } from "react";
+import Loader from "../Loader";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -41,7 +41,11 @@ const BallCanvas = ({ icon, name }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }} style={{ overflow: 'visible' }}>
+    <Canvas
+      frameloop="always"
+      gl={{ preserveDrawingBuffer: true }}
+      style={{ overflow: "visible" }}
+    >
       <Suspense fallback={<Loader />}>
         <OrbitControls enableZoom={false} position0={0} />
         <group
@@ -51,9 +55,7 @@ const BallCanvas = ({ icon, name }) => {
           <Ball imgUrl={icon} />
           {hovered && (
             <Html>
-              <div className="technology-label">
-                {name}
-              </div>
+              <div className="technology-label">{name}</div>
             </Html>
           )}
         </group>
