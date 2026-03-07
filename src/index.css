@@ -35,7 +35,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color-scheme: dark;
-  overscroll-behavior: none;
+}
+
+html,
+body {
+  overscroll-behavior-y: auto;
 }
 
 .nav-links::after {
