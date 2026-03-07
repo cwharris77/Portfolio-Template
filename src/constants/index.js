@@ -23,7 +23,6 @@ import {
   rallyboard,
   reactjs,
   reeldin,
-  remotetasks,
   snapchat,
   stl,
   sudoku,
@@ -149,13 +148,6 @@ const experiences = [
     icon: uofa,
     iconBg: "#e2002d",
     date: "June 2022 - May 2024",
-  },
-  {
-    title: "AI Reviewer",
-    company_name: "Remotetasks",
-    icon: remotetasks,
-    iconBg: "#35ce9d",
-    date: "December 2023 - June 2024",
   },
   {
     title: "Software Engineer",
