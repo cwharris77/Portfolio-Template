@@ -59,6 +59,7 @@ import python from "./tech/python.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import rubyrails from "./tech/rubyrails.png";
+import supabase from "./tech/supabase.jpeg";
 import swift from "./tech/swift.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.jpeg";
@@ -141,6 +142,7 @@ export {
   snapchat,
   stl,
   sudoku,
+  supabase,
   swift,
   tailwind,
   technology,

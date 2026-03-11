@@ -1,17 +1,12 @@
 import {
   ai,
   alien,
-  apollo,
-  aws,
-  azure,
   cloud,
   cybertrip,
   db,
   diffdragon,
-  emotion,
   frontend,
   gcp,
-  git,
   graphql,
   java,
   jest,
@@ -19,6 +14,7 @@ import {
   nextjs,
   nextview,
   nodejs,
+  postgresql,
   python,
   rallyboard,
   reactjs,
@@ -26,6 +22,7 @@ import {
   snapchat,
   stl,
   sudoku,
+  supabase,
   tailwind,
   trends,
   typescript,
@@ -69,6 +66,10 @@ const services = [
 
 const technologies = [
   {
+    name: "Next.js",
+    icon: nextjs,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
@@ -76,38 +77,32 @@ const technologies = [
     name: "TypeScript",
     icon: typescript,
   },
+
   {
-    name: "GraphQL",
-    icon: graphql,
+    name: "Supabase",
+    icon: supabase,
   },
   {
-    name: "Apollo Client",
-    icon: apollo,
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
   {
     name: "Jest",
     icon: jest,
   },
   {
-    name: "Emotion JS",
-    icon: emotion,
-  },
-  {
-    name: "Git",
-    icon: git,
+    name: "GraphQL",
+    icon: graphql,
   },
   {
     name: "Java",
     icon: java,
   },
-  {
-    name: "Next.js",
-    icon: nextjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+
   {
     name: "Python3",
     icon: python,
@@ -119,14 +114,6 @@ const technologies = [
   {
     name: "Node JS",
     icon: nodejs,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "Microsoft Azure",
-    icon: azure,
   },
   {
     name: "Google Cloud Platform",
