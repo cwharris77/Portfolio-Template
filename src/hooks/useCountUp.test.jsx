@@ -1,17 +1,18 @@
-import React from "react"; // eslint-disable-line no-unused-vars
+import PropTypes from "prop-types";
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { useCountUp } from "./useCountUp";
 
-// eslint-disable-next-line react/prop-types
-const Probe = ({ value }) => {
+function Probe({ value }) {
   const { ref, display } = useCountUp(value, { durationMs: 0 });
   return (
     <span ref={ref} data-testid="v">
       {display}
     </span>
   );
-};
+}
+
+Probe.propTypes = { value: PropTypes.string.isRequired };
 
 describe("useCountUp", () => {
   it("returns non-numeric values unchanged", () => {
