@@ -44,13 +44,15 @@ const About = () => {
         className="mt-4 text-inkDim font-hanken text-[18px] max-w-6xl leading-[30px]"
       >
         I&#39;m a full stack software engineer currently at RallyBoard, where I
-        build tools that bring professional orgs together. Before that, I spent
-        time at Snap Inc. on the Business Experience team, working across the
-        stack to improve how businesses and advertisers interacted with the
-        platform. I enjoy the full picture, from backend systems to the
-        interfaces people actually use. Lately, I&#39;ve also been exploring
-        mobile app development, which has been a fun way to try something new
-        and build things on my own.
+        help build the platform associations use to launch and run peer
+        learning cohorts, from AI-powered member matching to the engagement
+        analytics that show organizations what&#39;s actually working. Before
+        that, I spent time at Snap Inc. on the Business Experience team,
+        working across the stack to improve how businesses and advertisers
+        interacted with the platform. I enjoy the full picture, from backend
+        systems to the interfaces people actually use. Lately, I&#39;ve also
+        been exploring mobile app development, which has been a fun way to
+        try something new and build things on my own.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
