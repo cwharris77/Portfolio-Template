@@ -35,7 +35,7 @@ export const workLog = [
         },
       ],
       results:
-        "Attendance and recaps are now automatic and consistent. The same status model later powered the interactive pipeline demo (a separate, planned feature).",
+        "Meeting attendance and recaps are now fully automated and consistent, eliminating the manual reconciliation step this pipeline replaced.",
     },
     bullets: [
       "Designed and shipped an 8-step durable workflow (Inngest) that automated meeting attendance and AI recaps, cutting ~1h of manual work per meeting to ~3min.",
@@ -91,7 +91,7 @@ export const workLog = [
         },
       ],
       results:
-        "Staff manage a cohort's full meeting schedule inside the app instead of coordinating externally. Members and staff can reschedule single meetings or entire recurring series in a few clicks, backed by availability data instead of guesswork, with calendar behavior that stays correct across every major calendar client.",
+        "Staff now manage a cohort's entire meeting schedule directly within the app, eliminating external coordination. Members and staff can reschedule individual meetings or full recurring series based on real availability data rather than manual guesswork, with calendar behavior verified correct across all major calendar clients.",
     },
     bullets: [
       "Built a full-stack scheduling and rescheduling system that replaced manual calendar coordination, letting staff create recurring or one-off schedules and reschedule single meetings or entire series with automated calendar updates.",
@@ -148,7 +148,7 @@ export const workLog = [
         },
       ],
       results:
-        "Every error now carries user attribution and links directly to its session recording, cutting debugging time noticeably. Structured logs are queryable by user, feature, and action in the log aggregator. The 8 previously silent failure paths are now visible and searchable, and a redaction layer runs automatically before any error reaches storage.",
+        "Every error now carries user attribution and a direct link to its session recording, substantially reducing time to diagnose issues. Structured logs are queryable by user, feature, and action in the log aggregator, and the 8 previously silent failure paths are now visible and searchable. An automated redaction layer runs before any error reaches storage.",
     },
     bullets: [
       "Led a multi-PR migration (11 sequenced PRs, ~237 files, ~350+ call sites) from ad-hoc console logging to a structured error-reporting system with user attribution, session-replay linking, and structured logs — closing 8 production blind spots where failures were being silently swallowed.",
@@ -212,7 +212,7 @@ export const workLog = [
         },
       ],
       results:
-        "Participant-matching auto-correction reached full accuracy on its baseline validation set and now runs with automated confidence-gated apply and fallback to human review only when needed. Meeting summaries pass through a four-point automated quality gate (grounding in the source transcript, name anonymization, roster-match accuracy, and leakage of pre-meeting content) before insertion, flagging rather than blocking on failure so visibility is preserved without stalling delivery. The framework was designed from day one to extend to other LLM features beyond the three it launched with.",
+        "Participant-matching auto-correction achieved full accuracy on its baseline validation set and now operates with automated, confidence-gated correction, falling back to human review only when needed. Meeting summaries pass through a four-point automated quality gate — transcript grounding, name anonymization, roster-match accuracy, and pre-meeting content leakage — before insertion, flagging rather than blocking on failure to preserve visibility without stalling delivery. The framework was designed to extend beyond the three LLM features it initially launched with.",
     },
     bullets: [
       "Designed and shipped an LLM evaluation framework that automated three manual quality-check workflows, replacing full human-in-the-loop review with automated grading and confidence-gated auto-correction.",
@@ -270,7 +270,7 @@ export const workLog = [
         },
       ],
       results:
-        "The control now enforces visibility at the data layer, not just the UI, closing the gap the review caught before it ever reached production. Every error path defaults safely to hidden, and the two-tier inheritance model reused an existing pattern instead of introducing a new one, keeping the change consistent with the rest of the codebase.",
+        "The control now enforces visibility at the data layer rather than the UI alone, closing a gap identified in code review prior to release. Every error path defaults safely to hidden, and the two-tier inheritance model reuses an existing pattern rather than introducing a new one, keeping the change consistent with the rest of the codebase.",
     },
     bullets: [
       "Designed and shipped a staff-controlled member-privacy feature as a composable field-visibility filter (~1,200 lines, 60+ tests), architected to extend to granular per-field controls later.",

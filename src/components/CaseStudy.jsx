@@ -59,8 +59,7 @@ const CaseStudy = ({ slug, onClose }) => {
     );
   }
 
-  const { title, oneLiner, timeline, role, stack, metrics, sections, bullets } =
-    entry;
+  const { title, oneLiner, timeline, role, stack, metrics, sections } = entry;
 
   return (
     <motion.article
@@ -131,13 +130,6 @@ const CaseStudy = ({ slug, onClose }) => {
           </div>
         </Block>
         <Block heading="Results">{sections.results}</Block>
-        <Block heading="Resume bullets">
-          <ul className="list-disc pl-5 space-y-2">
-            {bullets.map((b) => (
-              <li key={b}>{b}</li>
-            ))}
-          </ul>
-        </Block>
 
         <div className="flex justify-between mt-14 border-t border-line pt-6">
           {prev ? (

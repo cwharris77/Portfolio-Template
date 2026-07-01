@@ -66,6 +66,7 @@ body {
   overscroll-behavior-y: auto;
   background: var(--bg);
   color: var(--ink);
+  overflow-x: hidden;
 }
 
 .nav-links::after {
@@ -118,12 +119,11 @@ body {
 
 .vertical-timeline.vertical-timeline-custom-line::before {
   background: var(--line);
-  background: linear-gradient(180deg, var(--line) 40%, var(--accent) 100%);
 }
 
 .vertical-timeline-element-icon {
   box-shadow:
-    0 0 0 4px var(--accent),
+    0 0 0 4px var(--line),
     inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
