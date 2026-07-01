@@ -3,15 +3,15 @@ import { styles } from "../styles";
 const Footer = () => {
   return (
     <footer
-      className={`${styles.paddingX} w-full py-5 bg-jet mt-3 flex justify-end items-center text-lg`}
+      className={`${styles.paddingX} w-full py-5 bg-bgElev mt-3 flex justify-end items-center text-lg`}
     >
       <div className="flex gap-4">
-        <p className="text-secondary">
+        <p className="text-inkDim font-hanken">
           <a
             target="_blank"
             href="https://icons8.com/icon/1476/database"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-ink transition-colors"
           >
             Database
           </a>
@@ -20,7 +20,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
             href="https://icons8.com/icon/PfQnRGTIisIV/ai"
-            className="hover:text-white transition-colors"
+            className="hover:text-ink transition-colors"
           >
             AI
           </a>{" "}
@@ -29,7 +29,7 @@ const Footer = () => {
             target="_blank"
             href="https://icons8.com"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-ink transition-colors"
           >
             Icons8
           </a>

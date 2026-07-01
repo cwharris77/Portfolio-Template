@@ -123,17 +123,13 @@ body {
 }
 
 .vertical-timeline.vertical-timeline-custom-line::before {
-  background: rgb(66, 66, 66);
-  background: linear-gradient(
-    180deg,
-    rgba(66, 66, 66, 0.8) 40%,
-    rgba(234, 234, 236, 0.45) 100%
-  );
+  background: var(--line);
+  background: linear-gradient(180deg, var(--line) 40%, var(--accent) 100%);
 }
 
 .vertical-timeline-element-icon {
   box-shadow:
-    0 0 0 4px #afafafd2,
+    0 0 0 4px var(--accent),
     inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
