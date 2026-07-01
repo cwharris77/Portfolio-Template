@@ -27,9 +27,9 @@ const styles = {
   sectionHeadTextLight:
     "text-ink font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-bricolage",
   sectionSubText:
-    "sm:text-[18px] text-[16px] text-accent uppercase tracking-wider font-semibold font-hanken",
+    "sm:text-[14px] text-[13px] text-accent uppercase tracking-[0.18em] font-medium font-mono",
   sectionSubTextLight:
-    "sm:text-[18px] text-[16px] text-accent uppercase tracking-wider font-semibold font-hanken",
+    "sm:text-[14px] text-[13px] text-accent uppercase tracking-[0.18em] font-medium font-mono",
 };
 
 export { styles };

@@ -19,6 +19,9 @@ const ServiceCard = ({ index, title, icon }) => {
       className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div className="bg-bgElev border border-line rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <p className="text-inkDim font-mono text-[13px]">
+          {String(index + 1).padStart(2, "0")}
+        </p>
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
         <h3 className="text-ink text-[18px] font-bold font-hanken text-center">
           {title}
@@ -33,7 +36,7 @@ const About = () => {
     <div className="-mt-[9rem]">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}></h2>
+        <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
       <motion.p

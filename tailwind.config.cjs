@@ -71,6 +71,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         bricolage: ['"Bricolage Grotesque"', "sans-serif"],
         hanken: ['"Hanken Grotesk"', "sans-serif"],
+        mono: ['"JetBrains Mono"', "monospace"],
       },
     },
   },

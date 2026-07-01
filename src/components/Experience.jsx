@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-inkDim text-[18px] font-bold font-hanken">
+        <h3 className="text-inkDim text-[16px] font-bold font-mono">
           {experience.date}
         </h3>
       </div>
@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => (
         {experience.title}
       </h3>
       <p
-        className="text-accent text-[22px] font-semibold tracking-[1px] font-hanken"
+        className="text-inkDim text-[22px] font-semibold tracking-[1px] font-hanken"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -108,11 +108,11 @@ const Experience = () => {
           >
             <button
               className="live-demo flex justify-between
-              sm:text-[18px] text-[14px] text-bgDeep
+              sm:text-[18px] text-[14px] text-ink
               font-bold font-hanken items-center py-5 pl-3 pr-3
               whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px]
-              w-[125px] h-[46px] rounded-[10px] bg-accent
-              sm:mt-[22px] mt-[16px] hover:opacity-90
+              w-[125px] h-[46px] rounded-[10px] bg-bgElev border border-line
+              sm:mt-[22px] mt-[16px] hover:border-accent hover:text-accent
               transition duration-[0.2s]
               ease-in-out"
               onClick={() =>

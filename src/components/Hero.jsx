@@ -26,8 +26,8 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} uppercase`}>
               Hi, I&apos;m{" "}
               <span
-                className="sm:text-accent sm:text-[90px]
-                text-accent text-[50px] font-mova
+                className="sm:text-warm sm:text-[90px]
+                text-warm text-[50px] font-mova
                 font-extrabold uppercase"
               >
                 Cooper
@@ -51,8 +51,8 @@ const Hero = () => {
         >
           <a href="#about">
             <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french flex
+              className="w-[35px] h-[64px] rounded-3xl border-4
+            border-line flex
             justify-center items-start p-2"
             >
               <motion.div
@@ -64,7 +64,7 @@ const Hero = () => {
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
+                className="w-3 h-3 rounded-full bg-inkDim mb-1"
               />
             </div>
           </a>

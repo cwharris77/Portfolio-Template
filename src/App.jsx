@@ -18,9 +18,8 @@ import {
   Footer,
   Hero,
   Navbar,
-  Projects,
+  SelectedWork,
   Tech,
-  Work,
 } from "./components";
 import CaseStudy from "./components/CaseStudy";
 import CaseStudyRoute from "./components/CaseStudyRoute";
@@ -37,8 +36,7 @@ const Home = () => (
     <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
       <Tech />
     </div>
-    <Projects />
-    <Work />
+    <SelectedWork />
     <div className="bg-experience bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[150px]">
       <div className="bg-experienceLight bg-cover bg-center bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
         <Experience />
