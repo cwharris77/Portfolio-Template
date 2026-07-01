@@ -11,7 +11,9 @@
     "lint:fix": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "preview": "vite preview",
-    "fix-all": "npm run lint:fix && npm run format"
+    "fix-all": "npm run lint:fix && npm run format",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -36,7 +38,8 @@
     "use": "^3.1.1"
   },
   "devDependencies": {
-    "prop-types": "^15.8.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^14.3.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
@@ -45,9 +48,12 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "jsdom": "^24.1.3",
     "postcss": "^8.4.23",
     "prettier": "^3.8.1",
+    "prop-types": "^15.8.1",
     "tailwindcss": "^3.3.2",
-    "vite": "^4.5.2"
+    "vite": "^4.5.2",
+    "vitest": "^1.6.1"
   }
 }
