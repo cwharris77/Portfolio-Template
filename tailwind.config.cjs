@@ -28,6 +28,13 @@ export default {
         eerieBlack: "#1f1f1f",
         onyx: "#5b5b5b",
         cyber: "#62d3f2",
+        bgDeep: "var(--bg)",
+        bgElev: "var(--bg-elev)",
+        ink: "var(--ink)",
+        inkDim: "var(--ink-dim)",
+        accent: "var(--accent)",
+        warm: "var(--warm)",
+        line: "var(--line)",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #1f1f1f",
