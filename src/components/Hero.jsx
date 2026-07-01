@@ -23,7 +23,7 @@ const Hero = () => {
           justify-between gap-3`}
         >
           <div>
-            <h1 className={`${styles.heroHeadText} font-poppins uppercase`}>
+            <h1 className={`${styles.heroHeadText} uppercase`}>
               Hi, I&apos;m{" "}
               <span
                 className="sm:text-accent sm:text-[90px]
