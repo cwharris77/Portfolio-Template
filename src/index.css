@@ -183,6 +183,24 @@ body {
   );
 }
 
+.pre-in {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+@media (prefers-reduced-motion: reduce), print {
+  .pre-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
