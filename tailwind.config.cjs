@@ -62,6 +62,8 @@ export default {
         overcameBold: ["Overcame Bold"],
         overcameOutline: ["Overcame Outline"],
         poppins: ["Poppins", "sans-serif"],
+        bricolage: ['"Bricolage Grotesque"', "sans-serif"],
+        hanken: ['"Hanken Grotesk"', "sans-serif"],
       },
     },
   },

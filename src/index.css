@@ -5,6 +5,20 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./fonts/hanken-grotesk.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Arenq";
   src: url("./fonts/arenq.otf");
 }
