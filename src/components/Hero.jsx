@@ -23,19 +23,17 @@ const Hero = () => {
           justify-between gap-3`}
         >
           <div>
-            <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}
-            >
+            <h1 className={`${styles.heroHeadText} font-poppins uppercase`}>
               Hi, I&apos;m{" "}
               <span
-                className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
+                className="sm:text-accent sm:text-[90px]
+                text-accent text-[50px] font-mova
                 font-extrabold uppercase"
               >
                 Cooper
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
+            <p className={`${styles.heroSubText} mt-2`}>
               Full Stack Software Engineer
             </p>
           </div>
