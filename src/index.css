@@ -110,12 +110,6 @@ body {
   letter-spacing: -2px;
 }
 
-.hero-heading {
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -173,12 +167,7 @@ body {
 }
 
 .card-gradient {
-  background: rgb(244, 244, 246);
-  background: linear-gradient(
-    180deg,
-    rgba(153, 153, 161, 1) 25%,
-    rgba(153, 153, 161, 1) 100%
-  );
+  background: var(--line);
 }
 
 .pre-in {

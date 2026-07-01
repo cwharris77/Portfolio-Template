@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { workLog } from "../constants/workLog";
 import { SectionWrapper } from "../hoc";
@@ -30,10 +29,6 @@ const Work = () => {
       </div>
     </div>
   );
-};
-
-Work.propTypes = {
-  children: PropTypes.node,
 };
 
 const WrappedWork = SectionWrapper(Work, "work");
