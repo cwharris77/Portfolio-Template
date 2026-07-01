@@ -1,7 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { send, sendHover } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
@@ -128,22 +127,21 @@ const Contact = () => {
             w-[100px] h-[45px] rounded-[10px] bg-accent
             hover:opacity-90
             transition duration-[0.2s] ease-in-out"
-            onMouseOver={() => {
-              document
-                .querySelector(".contact-btn")
-                .setAttribute("src", sendHover);
-            }}
-            onMouseOut={() => {
-              document.querySelector(".contact-btn").setAttribute("src", send);
-            }}
           >
             {loading ? "Sending" : "Send"}
-            <img
-              src={send}
-              alt="send"
-              className="contact-btn sm:w-[26px] sm:h-[26px] 
-              w-[23px] h-[23px] object-contain"
-            />
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="sm:w-[22px] sm:h-[22px] w-[19px] h-[19px]"
+              aria-hidden="true"
+            >
+              <path d="M22 2 11 13" />
+              <path d="M22 2 15 22 11 13 2 9 22 2Z" />
+            </svg>
           </button>
         </form>
       </motion.div>

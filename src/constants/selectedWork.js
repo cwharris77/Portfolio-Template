@@ -39,7 +39,6 @@ const personalTiles = PERSONAL_PICKS.map((name) => {
       .map((t) => t.name)
       .slice(0, 3)
       .join(" · "),
-    image: project.image,
     demo: project.demo || null,
     repo: project.repo || null,
     ...PERSONAL_BADGE,

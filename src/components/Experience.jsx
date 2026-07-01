@@ -5,7 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { download, downloadHover, resume } from "../assets";
+import { resume } from "../assets";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -121,24 +121,22 @@ const Experience = () => {
                   "_blank",
                 )
               }
-              onMouseOver={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", download);
-              }}
             >
               MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="sm:w-[22px] sm:h-[22px] w-[19px] h-[19px]"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12" />
+                <path d="M7 10l5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
             </button>
           </VerticalTimelineElement>
         </VerticalTimeline>

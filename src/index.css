@@ -119,12 +119,12 @@ body {
 }
 
 .vertical-timeline.vertical-timeline-custom-line::before {
-  background: var(--line);
+  background: oklch(0.42 0.02 250);
 }
 
 .vertical-timeline-element-icon {
   box-shadow:
-    0 0 0 4px var(--line),
+    0 0 0 4px oklch(0.42 0.02 250),
     inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }

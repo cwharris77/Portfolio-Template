@@ -19,7 +19,7 @@ const SelectedWork = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-inkDim font-hanken text-[17px] max-w-2xl leading-[26px]"
       >
-        Production systems I&apos;ve shipped at RallyBoard, alongside the
+        Production systems I&apos;ve shipped professionally, alongside the
         personal builds I&apos;m proudest of.
       </motion.p>
 

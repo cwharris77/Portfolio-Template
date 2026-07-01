@@ -28,42 +28,33 @@ const TileBody = ({ entry }) => {
     badgeBorder,
     badgeBg,
     logo,
-    image,
   } = entry;
   return (
-    <>
-      {image && (
-        <div
-          className="h-[100px] bg-cover bg-center bg-bgDeep"
-          style={{ backgroundImage: `url(${image})` }}
-        />
-      )}
-      <div className="p-5 flex flex-col gap-[9px] flex-1">
-        <div className="flex items-center justify-between gap-[10px]">
-          {logo ? (
-            <span
-              className="w-7 h-7 rounded-lg bg-cover bg-center border border-line block"
-              style={{ backgroundImage: `url(${logo})` }}
-            />
-          ) : (
-            <span className="w-7 h-7 block" />
-          )}
-          <Badge
-            label={badge}
-            color={badgeColor}
-            border={badgeBorder}
-            bg={badgeBg}
+    <div className="p-5 flex flex-col gap-[9px] flex-1">
+      <div className="flex items-center justify-between gap-[10px]">
+        {logo ? (
+          <span
+            className="w-7 h-7 rounded-lg bg-cover bg-center border border-line block"
+            style={{ backgroundImage: `url(${logo})` }}
           />
-        </div>
-        <h3 className="text-ink font-bricolage text-[18.5px] leading-tight">
-          {title}
-        </h3>
-        <p className="text-inkDim font-hanken text-[14px] leading-[21px] flex-1">
-          {oneLiner}
-        </p>
-        <p className="text-inkDim font-mono text-[11px]">{stack}</p>
+        ) : (
+          <span className="w-7 h-7 block" />
+        )}
+        <Badge
+          label={badge}
+          color={badgeColor}
+          border={badgeBorder}
+          bg={badgeBg}
+        />
       </div>
-    </>
+      <h3 className="text-ink font-bricolage text-[18.5px] leading-tight">
+        {title}
+      </h3>
+      <p className="text-inkDim font-hanken text-[14px] leading-[21px] flex-1">
+        {oneLiner}
+      </p>
+      <p className="text-inkDim font-mono text-[11px]">{stack}</p>
+    </div>
   );
 };
 TileBody.propTypes = {
@@ -76,7 +67,6 @@ TileBody.propTypes = {
     badgeBorder: PropTypes.string.isRequired,
     badgeBg: PropTypes.string.isRequired,
     logo: PropTypes.string,
-    image: PropTypes.string,
   }).isRequired,
 };
 
