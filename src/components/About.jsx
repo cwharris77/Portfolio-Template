@@ -16,11 +16,14 @@ const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className='xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card'
+      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
     >
-      <div className='bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-        <img src={icon} alt={title} className='w-16 h-16 object-contain' />
-        <h3 className='text-taupe text-[18px] font-bold text-center'>
+      <div className="bg-bgElev border border-line rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <p className="text-inkDim font-mono text-[13px]">
+          {String(index + 1).padStart(2, "0")}
+        </p>
+        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <h3 className="text-ink text-[18px] font-bold font-hanken text-center">
           {title}
         </h3>
       </div>
@@ -30,15 +33,15 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <div className='-mt-[9rem]'>
+    <div className="-mt-[9rem]">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}></h2>
+        <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-taupe text-[18px] max-w-6xl leading-[30px]'
+        className="mt-4 text-inkDim font-hanken text-[18px] max-w-6xl leading-[30px]"
       >
         I&#39;m a full stack software engineer currently at RallyBoard, where I
         build tools that bring professional orgs together. Before that, I spent
@@ -50,7 +53,7 @@ const About = () => {
         and build things on my own.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10 justify-center'>
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

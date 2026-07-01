@@ -5,7 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { download, downloadHover, resume } from "../assets";
+import { resume } from "../assets";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
@@ -14,17 +14,18 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#eaeaec",
-      color: "#292929",
+      background: "var(--bg-elev)",
+      color: "var(--ink)",
+      border: "1px solid var(--line)",
       boxShadow:
-        "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+        "rgba(0, 0, 0, 0.3) 0px 10px 15px -3px, rgba(0, 0, 0, 0.15) 0px 4px 6px -2px",
     }}
     contentArrowStyle={{
-      borderRight: "7px solid  #232631",
+      borderRight: "7px solid var(--bg-elev)",
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="text-inkDim text-[16px] font-bold font-mono">
           {experience.date}
         </h3>
       </div>
@@ -41,11 +42,11 @@ const ExperienceCard = ({ experience }) => (
     }
   >
     <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="text-ink text-[24px] font-bold font-bricolage tracking-[2px]">
         {experience.title}
       </h3>
       <p
-        className="text-taupe text-[22px] font-semibold tracking-[1px]"
+        className="text-inkDim text-[22px] font-semibold tracking-[1px] font-hanken"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -82,18 +83,19 @@ const Experience = () => {
           ))}
           <VerticalTimelineElement
             contentStyle={{
-              background: "#eaeaec",
-              color: "#292929",
+              background: "var(--bg-elev)",
+              color: "var(--ink)",
+              border: "1px solid var(--line)",
               boxShadow:
-                "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+                "rgba(0, 0, 0, 0.3) 0px 10px 15px -3px, rgba(0, 0, 0, 0.15) 0px 4px 6px -2px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  #232631",
+              borderRight: "7px solid var(--bg-elev)",
             }}
-            iconStyle={{ background: "#333333" }}
+            iconStyle={{ background: "var(--bg-elev)" }}
             icon={
               <div className="flex justify-center items-center w-full h-full">
                 <img
@@ -105,13 +107,13 @@ const Experience = () => {
             }
           >
             <button
-              className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
+              className="live-demo flex justify-between
+              sm:text-[18px] text-[14px] text-ink
+              font-bold font-hanken items-center py-5 pl-3 pr-3
+              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px]
+              w-[125px] h-[46px] rounded-[10px] bg-bgElev border border-line
+              sm:mt-[22px] mt-[16px] hover:border-accent hover:text-accent
+              transition duration-[0.2s]
               ease-in-out"
               onClick={() =>
                 window.open(
@@ -119,24 +121,22 @@ const Experience = () => {
                   "_blank",
                 )
               }
-              onMouseOver={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", download);
-              }}
             >
               MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
-              />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="sm:w-[22px] sm:h-[22px] w-[19px] h-[19px]"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12" />
+                <path d="M7 10l5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
             </button>
           </VerticalTimelineElement>
         </VerticalTimeline>
@@ -145,5 +145,5 @@ const Experience = () => {
   );
 };
 
-const WrappedExperience = SectionWrapper(Experience, "work");
+const WrappedExperience = SectionWrapper(Experience, "experience");
 export default WrappedExperience;
