@@ -64,6 +64,8 @@
 html,
 body {
   overscroll-behavior-y: auto;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .nav-links::after {
