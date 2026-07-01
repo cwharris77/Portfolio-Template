@@ -52,7 +52,7 @@ export default {
       },
       backgroundImage: {
         about:
-          "linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)",
+          "linear-gradient(165deg, rgba(31,38,53,1) 100%, rgba(10,10,14,1) 100%)",
         experience:
           "linear-gradient(150deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
         experienceLight:
@@ -60,7 +60,7 @@ export default {
         hero: "linear-gradient(135deg, rgba(31,38,53,0.85) 60%, rgba(10,10,14,0.97) 60%)",
         "hero-mobile":
           "linear-gradient(137deg, rgba(31,38,53,0.85) 60%, rgba(10,10,14,1) 60%)",
-        tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/src/assets/backgrounds/wave-light.jpeg')",
+        tech: "linear-gradient(165deg, rgba(20,20,20,0.9) 100%, rgba(31,38,53,0.9) 100%), url('/src/assets/backgrounds/wave-light.jpeg')",
       },
       fontFamily: {
         arenq: ["Arenq"],
