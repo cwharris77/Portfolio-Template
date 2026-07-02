@@ -141,14 +141,14 @@ PersonalTile.propTypes = {
 };
 
 const SelectedWorkTile = ({ entry }) =>
-  entry.kind === "rallyboard" ? (
-    <RallyBoardTile entry={entry} />
-  ) : (
+  entry.kind === "personal" ? (
     <PersonalTile entry={entry} />
+  ) : (
+    <RallyBoardTile entry={entry} />
   );
 SelectedWorkTile.propTypes = {
   entry: PropTypes.shape({
-    kind: PropTypes.oneOf(["rallyboard", "personal"]).isRequired,
+    kind: PropTypes.oneOf(["rallyboard", "snap", "personal"]).isRequired,
   }).isRequired,
 };
 

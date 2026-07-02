@@ -101,63 +101,6 @@ export const workLog = [
     ],
   },
   {
-    slug: "observability-migration",
-    title: "Error Handling & Observability Migration",
-    oneLiner:
-      "A five-day, sequenced migration from console-only error logging to structured error reporting with user attribution, session-replay links, and PII redaction — closing 8 production blind spots along the way.",
-    timeline: "2026 Q2",
-    role: "Sole engineer — end-to-end design and execution",
-    stack: [
-      "Next.js",
-      "Sentry",
-      "Session replay",
-      "Structured logging",
-      "ESLint",
-    ],
-    metrics: [
-      { label: "Source files migrated", value: "~237" },
-      { label: "Call sites updated", value: "~350+" },
-      { label: "Sequenced PRs", value: "11" },
-      { label: "Blind spots closed", value: "8" },
-    ],
-    sections: {
-      problem:
-        "The codebase logged errors to the console only — nothing reached the error-monitoring tool unless someone manually re-reported it. Several catch blocks failed completely silently, error events couldn't be tied to a specific user, and there was no link from an error to the user's session recording, so debugging meant hunting manually. Error messages also risked leaking unredacted personal data into logs.",
-      build:
-        "A new error-reporting module with a clear split between client-safe and server-only capture functions, structured context (user, org, route, feature) promoted to filterable tags, and a key-based PII redaction layer applied before anything leaves the server. It wired user identity into every error report and linked session-replay recordings directly to their corresponding error, plus emitted structured JSON logs that log aggregators can query directly. The whole migration ran as 11 small, independently reviewable PRs instead of one large rewrite.",
-      challenges:
-        "The build tool performed static import analysis that didn't respect runtime guards — a client component importing a type from a file that transitively pulled in a server-only logger broke the build, even though the server-only code never actually ran on the client. Fixing that required auditing which files were reachable from the client, converting a set of imports to type-only imports, and mandating explicit import paths instead of barrel imports so the bundler couldn't discover server-only code by scanning sibling files.",
-      decisions: [
-        {
-          decision:
-            "Split error capture into a client-safe function and a server-only function rather than one shared API.",
-          rationale:
-            "The client bundle doesn't need the structured-logging dependency, and making the split explicit in the function name prevents accidentally pulling server code into client bundles.",
-        },
-        {
-          decision:
-            "Ship an auto-forwarding compatibility bridge in the first PR so existing calls started reporting immediately.",
-          rationale:
-            "Dozens of files got upgraded with zero code changes on day one, and the team started getting real signal before the bulk of the migration even landed.",
-        },
-        {
-          decision:
-            "Sequence the migration as many small, layer-by-layer PRs instead of one big rewrite.",
-          rationale:
-            "Each PR stayed small enough to review carefully, and the test suite stayed green the entire time — no production regressions across the whole migration.",
-        },
-      ],
-      results:
-        "Every error now carries user attribution and a direct link to its session recording, substantially reducing time to diagnose issues. Structured logs are queryable by user, feature, and action in the log aggregator, and the 8 previously silent failure paths are now visible and searchable. An automated redaction layer runs before any error reaches storage.",
-    },
-    bullets: [
-      "Led a multi-PR migration (11 sequenced PRs, ~237 files, ~350+ call sites) from ad-hoc console logging to a structured error-reporting system with user attribution, session-replay linking, and structured logs — closing 8 production blind spots where failures were being silently swallowed.",
-      "Diagnosed and resolved a build-tool static-import issue where client components transitively pulled in server-only modules; designed and documented import-boundary rules so the team wouldn't re-encounter the same trap.",
-      "Designed a PII redaction layer with key-based filtering and safe handling of circular references and oversized payloads, applied automatically before any error reaches storage.",
-      "Sequenced the rollout as a zero-downtime migration: a compatibility bridge upgraded dozens of files with no code changes on day one, lint rules were temporarily relaxed during migration, and re-enforced once it was complete.",
-    ],
-  },
-  {
     slug: "llm-eval-framework",
     title: "LLM Eval Framework",
     oneLiner:
@@ -221,62 +164,6 @@ export const workLog = [
       "Shipped automated participant-matching correction reaching full accuracy on its baseline validation corpus, using a cheapest-viable-model strategy with a promotion path to stronger models if per-domain accuracy slips.",
       "Built a four-touchpoint automated meeting-summary quality gate (grounding, anonymization, roster match, content-leakage check) sitting between generation and delivery, flagging failures for review without blocking delivery.",
       "Designed a reversibility-first auto-correction pattern with a full audit trail, making automated LLM decisions safe to trust in production because every one is reviewable and revertible.",
-    ],
-  },
-  {
-    slug: "profile-visibility",
-    title: "Profile Visibility — Member Privacy Control",
-    oneLiner:
-      "A staff-controlled privacy toggle enforced with server-side field redaction — including a real data-leak vulnerability caught and fixed during pre-launch review.",
-    timeline: "2026 Q2",
-    role: "Sole engineer — design, build, ship (P0)",
-    stack: [
-      "Next.js (Server Components)",
-      "Postgres",
-      "Server Actions",
-      "Radix UI",
-    ],
-    metrics: [
-      { label: "Lines shipped", value: "~1,200" },
-      { label: "Test cases", value: "60+" },
-      { label: "Data leaks caught pre-launch", value: "1" },
-      { label: "Inheritance model", value: "2-tier" },
-    ],
-    sections: {
-      problem:
-        "Members could view each other's full profile details by default — job title, organization, contact info, and more — and there was no way for staff to restrict that visibility for groups where it wasn't appropriate. This had to ship as a genuine security control, not a cosmetic UI toggle: if the underlying data still reached the browser and was merely hidden by a client-side check, anyone could read it via developer tools.",
-      build:
-        "A composable field-visibility filter with a defined vocabulary of profile fields, a policy layer that maps a visibility setting to the set of fields allowed through, and a strict-whitelist redaction step that runs on the server before any data is serialized to the client. Visibility resolves through a two-tier model — an organization-level default with an optional group-level override — mirroring an existing inheritance pattern already used elsewhere in the codebase.",
-      challenges:
-        "The first version of this gated fields only in the UI layer, and pre-launch review caught that the full profile object was still shipping to the client underneath the hidden UI — readable in developer tools despite looking correctly hidden on screen. The fix moved enforcement server-side, before serialization, so unapproved fields never leave the server at all. Beyond that, a privacy control has an unusually dangerous failure mode: failing open. Every error path — a missing record, an inheritance value that can't resolve, a malformed identifier — had to default to hiding the profile rather than showing it.",
-      decisions: [
-        {
-          decision:
-            "Enforce redaction server-side, before data is serialized to the client, rather than gating fields in the UI.",
-          rationale:
-            "UI-only gating still ships the full object to the browser, which is trivially readable in developer tools; real enforcement has to happen before data crosses the server/client boundary.",
-        },
-        {
-          decision:
-            "Default every error path to hiding the profile rather than showing it.",
-          rationale:
-            "For a privacy control specifically, failing open is the dangerous failure mode — an unresolved edge case should never result in exposing data.",
-        },
-        {
-          decision:
-            "Ship a single organization-wide switch now, but design the field vocabulary and policy layer to support granular per-field toggles later.",
-          rationale:
-            "This gets the architecture ready for more granular controls without paying the complexity or testing cost of building and validating them before they're needed.",
-        },
-      ],
-      results:
-        "The control now enforces visibility at the data layer rather than the UI alone, closing a gap identified in code review prior to release. Every error path defaults safely to hidden, and the two-tier inheritance model reuses an existing pattern rather than introducing a new one, keeping the change consistent with the rest of the codebase.",
-    },
-    bullets: [
-      "Designed and shipped a staff-controlled member-privacy feature as a composable field-visibility filter (~1,200 lines, 60+ tests), architected to extend to granular per-field controls later.",
-      "Caught and fixed a data-leak vulnerability in pre-launch review where hidden profile fields were still shipping to the client; moved enforcement to server-side strict-whitelist redaction before serialization.",
-      "Built fail-closed resolution across every error path — missing records, unresolved inheritance, malformed identifiers — so the privacy control defaults to hiding data whenever state is uncertain.",
-      "Implemented a two-tier inheritance model for the visibility setting, reusing an existing pattern already established elsewhere in the codebase for consistency.",
     ],
   },
 ];

@@ -19,6 +19,7 @@ import {
   rallyboard,
   reactjs,
   reeldin,
+  replayRadarLogo,
   snapchat,
   stl,
   sudoku,
@@ -180,6 +181,7 @@ const projects = [
     image: trends,
     repo: "https://github.com/cwharris77/replay-radar",
     demo: "https://replay-radar.vercel.app/",
+    logo: replayRadarLogo,
   },
   {
     id: "project-2",
@@ -211,6 +213,7 @@ const projects = [
     image: nextview,
     repo: "https://github.com/cwharris77/nextview",
     demo: "https://next-view-web-client-219398653361.us-west1.run.app/",
+    logo: null,
   },
   {
     id: "project-3",
@@ -238,6 +241,7 @@ const projects = [
     image: reeldin,
     repo: "https://github.com/jonathanhouge/ReeldIn",
     demo: "",
+    logo: null,
   },
   {
     id: "project-4",
@@ -266,6 +270,7 @@ const projects = [
     image: diffdragon,
     repo: "https://github.com/cwharris77/pr-review-bot",
     demo: "",
+    logo: null,
   },
   {
     id: "project-5",
@@ -294,6 +299,7 @@ const projects = [
     image: cybertrip,
     repo: "https://github.com/cwharris77/cyberTRIP",
     demo: "",
+    logo: null,
   },
   {
     id: "project-6",
@@ -318,6 +324,7 @@ const projects = [
     image: alien,
     repo: "https://github.com/cwharris77/Alien-Invasion",
     demo: "https://cwharris77.github.io/Alien-Invasion/",
+    logo: null,
   },
   {
     id: "project-7",
@@ -341,6 +348,7 @@ const projects = [
     image: sudoku,
     repo: "https://github.com/cwharris77/sudoku",
     demo: "",
+    logo: null,
   },
   {
     id: "project-8",
@@ -365,6 +373,7 @@ const projects = [
     image: wiki,
     repo: "https://github.com/cwharris77/WikiRacer",
     demo: "",
+    logo: null,
   },
   {
     id: "project-9",
@@ -388,6 +397,7 @@ const projects = [
     image: stl,
     repo: "https://github.com/cwharris77/STL-Creator",
     demo: "",
+    logo: null,
   },
 ];
 

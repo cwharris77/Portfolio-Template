@@ -4,13 +4,11 @@ import { workLog } from "./workLog";
 const REQUIRED_SLUGS = [
   "zoom-metrics-pipeline",
   "self-service-rescheduling",
-  "observability-migration",
   "llm-eval-framework",
-  "profile-visibility",
 ];
 
 describe("workLog", () => {
-  it("has exactly the 5 v1 case studies in order", () => {
+  it("has exactly the required case studies in order", () => {
     expect(workLog.map((w) => w.slug)).toEqual(REQUIRED_SLUGS);
   });
 

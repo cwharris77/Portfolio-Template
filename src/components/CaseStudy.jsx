@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { snapWorkLog } from "../constants/snapWorkLog";
 import { workLog } from "../constants/workLog";
 import { useCountUp } from "../hooks/useCountUp";
 import { getAdjacentSlugs } from "./work/getAdjacentSlugs";
+
+const allWork = [...workLog, ...snapWorkLog];
 
 const Metric = ({ label, value }) => {
   const { ref, display } = useCountUp(value);
@@ -38,8 +41,8 @@ Block.propTypes = {
 };
 
 const CaseStudy = ({ slug, onClose }) => {
-  const entry = workLog.find((w) => w.slug === slug);
-  const { prev, next } = getAdjacentSlugs(slug, workLog);
+  const entry = allWork.find((w) => w.slug === slug);
+  const { prev, next } = getAdjacentSlugs(slug, allWork);
 
   useEffect(() => {
     if (!onClose) return;

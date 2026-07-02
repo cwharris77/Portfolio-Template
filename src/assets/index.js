@@ -11,6 +11,10 @@ import logotext from "./logo/logo-text-black.png";
 
 import me from "./personal/profile.png";
 
+import depthLogo from "./projects/logos/depth-logo.svg";
+import replayRadarLogo from "./projects/logos/replay-radar-logo.png";
+import scopedinLogo from "./projects/logos/scopedin-logo.png";
+
 import ai from "./icons/ai.png";
 import apple from "./icons/appleLogo.png";
 import backend from "./icons/backend2.png";
@@ -96,6 +100,7 @@ export {
   css,
   cybertrip,
   db,
+  depthLogo,
   diffdragon,
   django,
   docker,
@@ -135,8 +140,10 @@ export {
   redux,
   reeldin,
   remotetasks,
+  replayRadarLogo,
   resume,
   rubyrails,
+  scopedinLogo,
   send,
   sendHover,
   snapchat,
