@@ -24,20 +24,18 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // sign up on emailjs.com (select the gmail service and connect your account).
-    //click on create a new template then click on save.
     emailjs
       .send(
-        "service_mtedn0h", // paste your ServiceID here (you'll get one when your service is created).
-        "template_330g6jz", // paste your TemplateID here (you'll find it under email templates).
+        "service_mtedn0h",
+        "template_330g6jz",
         {
           from_name: form.name,
-          to_name: "Cooper Harris", // put your name here.
+          to_name: "Cooper Harris",
           from_email: form.email,
-          to_email: "cwharris365@gmail.com", //put your email here.
+          to_email: "cwharris365@gmail.com",
           message: form.message,
         },
-        "3plXucd1HHdBa-kMX", //paste your Public Key here. You'll get it in your profile section.
+        "3plXucd1HHdBa-kMX",
       )
       .then(
         () => {
@@ -50,9 +48,8 @@ const Contact = () => {
             message: "",
           });
         },
-        (error) => {
+        () => {
           setLoading(false);
-          console.log(error);
           alert("Something went wrong. Please try again.");
         },
       );
@@ -80,6 +77,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="Ex: John Doe"
@@ -94,6 +92,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="Ex: johndoe@gmail.com"
@@ -108,6 +107,7 @@ const Contact = () => {
             <textarea
               rows="7"
               name="message"
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="Ex: I want to speak to you about..."

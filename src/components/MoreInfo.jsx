@@ -23,7 +23,6 @@ const InfoTile = (props) => {
                     sm:mt-[22px] mt-[16px] hover:bg-battleGray 
                     hover:text-timberWolf transition duration-[0.2s] 
                     ease-in-out"
-          // onClick={() => window.open(demo, '_blank')}
           onClick={() => setShowInfo(!showInfo)}
           onMouseOver={() => {
             document.querySelector(".btn-icon");

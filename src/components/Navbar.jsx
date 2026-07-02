@@ -14,36 +14,26 @@ const Navbar = () => {
       top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}
     >
       <div className="w-full flex justify-between items-center max-w-9xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img
-            src={logo} // your logo comes here
-            alt="logo"
-            className="sm:w-[70px] sm:h-[60px] w-[45px] h-[45px] object-contain"
-          />
-
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          {/* <img
-            src={logotext}
-            alt="logo"
-            className="sm:w-[90px] sm:h-[90px] w-[85px] h-[85px] -ml-[0.6rem] object-contain"
-          /> */}
-          {/* LinkedIn */}
-          <div
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/cooper-harris77/",
-                "_blank",
-              )
-            }
-            className="bg-none sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+        <div className="flex items-center gap-2">
+          <Link
+            to="/"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className="sm:w-[70px] sm:h-[60px] w-[45px] h-[45px] object-contain"
+            />
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/cooper-harris77/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit my LinkedIn profile"
+            className="bg-none sm:w-12 sm:h-12 w-10 h-10 rounded-full
               flex justify-center items-center cursor-pointer
               sm:opacity-[0.9] opacity-[0.8]"
           >
@@ -52,13 +42,13 @@ const Navbar = () => {
               alt="Linkedin Link"
               className="object-contain rounded-full"
             />
-          </div>
-          {/* Github */}
-          <div
-            onClick={() =>
-              window.open("https://github.com/cwharris77", "_blank")
-            }
-            className="bg-night sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+          </a>
+          <a
+            href="https://github.com/cwharris77"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit my GitHub profile"
+            className="bg-night sm:w-12 sm:h-12 w-10 h-10 rounded-full
               flex justify-center items-center cursor-pointer
               sm:opacity-[0.9] opacity-[0.8]"
           >
@@ -67,13 +57,13 @@ const Navbar = () => {
               alt="Github Link"
               className="object-contain rounded-full w-4/5 h-4/5"
             />
-          </div>
-          {/* Twitter */}
-          <div
-            onClick={() =>
-              window.open("https://x.com/cooper_harris77", "_blank")
-            }
-            className="bg-black sm:w-12 sm:h-12 w-10 h-10 rounded-full 
+          </a>
+          <a
+            href="https://x.com/cooper_harris77"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Visit my X (formerly Twitter) profile"
+            className="bg-black sm:w-12 sm:h-12 w-10 h-10 rounded-full
               flex justify-center items-center cursor-pointer
               sm:opacity-[0.9] opacity-[0.8]"
           >
@@ -82,8 +72,8 @@ const Navbar = () => {
               alt="X formerly TwitterLink"
               className="object-contain rounded-full w-4/5 h-4/5"
             />
-          </div>
-        </Link>
+          </a>
+        </div>
         <ul className="list-none hidden md:flex flex-row gap-2 md:gap-4 lg:gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
