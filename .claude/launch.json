@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-worktree-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/cwharris/Documents/GitHubProjects/Portfolio-Template/.claude/worktrees/work-log-integration"],
+      "port": 5173
+    },
+    {
+      "name": "portfolio-main-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/cwharris/Documents/GitHubProjects/Portfolio-Template", "--", "--port", "5174"],
+      "port": 5174
+    },
+    {
+      "name": "depth-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/cwharris/Documents/GitHubProjects/depth", "--", "--port", "3000"],
+      "port": 3000
+    }
+  ]
+}
