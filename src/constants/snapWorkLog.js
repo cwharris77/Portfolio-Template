@@ -3,7 +3,7 @@ export const snapWorkLog = [
     slug: "dpa-refactor",
     title: "Dynamic Product Ads Refactor",
     oneLiner:
-      "A ground-up rebuild of Snap's largest Monetization surface — migrating off a bloated Redux architecture to React Hook Form + Jotai, saving the team an estimated ~20 hours a week.",
+      "A ground-up rebuild of Snap's largest Monetization surface — migrating off a bloated Redux architecture to React Hook Form + Jotai, saving the team over 20 developer hours a month.",
     timeline: "2025 Q2–Q3",
     role: "Co-lead engineer — redesign and rebuild with one other engineer",
     stack: [
@@ -15,7 +15,7 @@ export const snapWorkLog = [
       "gRPC",
     ],
     metrics: [
-      { label: "Team hours saved/week (est.)", value: "~20h" },
+      { label: "Team hours saved/month", value: "20+h" },
       { label: "App speed improvement (est.)", value: "~1%" },
       { label: "Engineers on rebuild", value: "2" },
       { label: "Timeline", value: "2 quarters" },
@@ -42,12 +42,12 @@ export const snapWorkLog = [
         },
       ],
       results:
-        "The rebuilt architecture cut day-to-day cognitive overhead enough that the team estimated it back roughly 20 hours a week, with a modest improvement in app speed as a secondary win. The bigger result was a codebase the team could actually extend without every change touching a shared, tangled state tree.",
+        "The rebuilt architecture cut day-to-day cognitive overhead enough to save the team over 20 developer hours a month, with a modest improvement in app speed as a secondary win. The bigger result was a codebase the team could actually extend without every change touching a shared, tangled state tree.",
     },
     bullets: [
       "Co-led a ground-up rebuild of Snap's Dynamic Product Ads system — the Monetization org's largest surface — migrating state management from Redux to React Hook Form + Jotai.",
       "Split page-level ownership with one other engineer across a two-quarter migration, moving advertiser-facing surfaces to the new architecture without a big-bang rewrite.",
-      "Reduced team-wide cognitive overhead enough to save an estimated ~20 hours per week, alongside a modest app-speed improvement.",
+      "Saved the team over 20 developer hours a month, alongside a modest app-speed improvement.",
     ],
   },
   {
@@ -85,6 +85,50 @@ export const snapWorkLog = [
     bullets: [
       "Contributed to a team-wide rebuild of Snap Promote for Web, collapsing an existing multi-step ad campaign flow into a one-click self-serve promotion.",
       "Focused on inference logic for campaign defaults, balancing simplicity against advertiser trust in an automated flow.",
+    ],
+  },
+  {
+    slug: "ai-image-quality-gate",
+    title: "AI Image Quality Pipeline",
+    oneLiner:
+      "An automated quality gate that detects low-resolution advertiser images and upscales them via a third-party AI API before they reach the ad pipeline, raising ad publish rates 5%.",
+    timeline: "Snap Inc. tenure (~2025, alongside DPA/Promote)",
+    role: "Solo engineer — design through launch",
+    stack: ["TypeScript", "Node.js", "Third-Party AI API", "Async Processing"],
+    metrics: [
+      { label: "Ad publish rate", value: "+5%" },
+      { label: "Trigger", value: "Automatic quality gate" },
+      { label: "Pipeline impact", value: "Non-blocking" },
+      { label: "Ownership", value: "Solo, design → launch" },
+    ],
+    sections: {
+      problem:
+        "Advertisers frequently uploaded low-resolution product images that either got rejected during ad review or simply underperformed once live, hurting both advertiser satisfaction and ad revenue.",
+      build:
+        "Designed and shipped an automated image-quality gate: every uploaded image is checked against a quality threshold on upload, and any image that falls short is automatically routed through a third-party AI upscaling API before continuing through the publish pipeline.",
+      challenges:
+        "AI upscaling is slow and costly compared to a normal upload — running it on every image unconditionally would have added unacceptable latency and cost to the publish flow. The integration had to trigger only for images that actually needed it and run without blocking the rest of the pipeline, so advertisers never felt the cost of the extra processing step.",
+      decisions: [
+        {
+          decision:
+            "Gate the upscaling behind an automatic quality check instead of running it on every image.",
+          rationale:
+            "Most images already clear the quality bar; calling an expensive third-party API unconditionally would have meant paying the latency and cost for images that didn't need it.",
+        },
+        {
+          decision:
+            "Run the upscaling step as a non-blocking part of the pipeline rather than inline before publish.",
+          rationale:
+            "Advertisers publishing ads shouldn't feel the cost of an occasional slow API call; keeping it non-blocking meant the quality gate could catch bad images without ever being the bottleneck.",
+        },
+      ],
+      results:
+        "Advertiser images that previously would have been rejected or underperformed due to low resolution are now automatically corrected before reaching the ad platform, raising ad publish rates by 5%.",
+    },
+    bullets: [
+      "Designed and shipped a solo, end-to-end automated image-quality gate that detects low-resolution advertiser images and routes them through a third-party AI upscaling API before they reach the ad pipeline.",
+      "Built the integration to trigger conditionally and run non-blocking, avoiding latency and cost overhead on every image while still catching the ones that needed it.",
+      "Raised ad publish rates by 5% by ensuring advertiser images consistently cleared the platform's quality threshold instead of being rejected.",
     ],
   },
 ];
