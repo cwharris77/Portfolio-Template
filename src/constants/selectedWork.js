@@ -98,4 +98,8 @@ const personalExtraTiles = PERSONAL_EXTRAS.map((extra) => ({
 
 const personalTiles = [...personalPickTiles, ...personalExtraTiles];
 
-export const selectedWork = [...rallyboardTiles, ...snapTiles, ...personalTiles];
+export const selectedWork = [
+  ...rallyboardTiles,
+  ...snapTiles,
+  ...personalTiles,
+];

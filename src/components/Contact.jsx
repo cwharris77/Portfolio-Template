@@ -84,7 +84,8 @@ const Contact = () => {
               className="bg-bgDeep py-4 px-6
               placeholder:text-inkDim
               text-ink rounded-lg outline-none
-              border border-line font-medium"
+              border border-line font-medium
+              focus-visible:ring-2 focus-visible:ring-accent"
             />
           </label>
           <label className="flex flex-col">
@@ -99,7 +100,8 @@ const Contact = () => {
               className="bg-bgDeep py-4 px-6
               placeholder:text-inkDim
               text-ink rounded-lg outline-none
-              border border-line font-medium"
+              border border-line font-medium
+              focus-visible:ring-2 focus-visible:ring-accent"
             />
           </label>
           <label className="flex flex-col">
@@ -114,7 +116,8 @@ const Contact = () => {
               className="bg-bgDeep py-4 px-6
               placeholder:text-inkDim
               text-ink rounded-lg outline-none
-              border border-line font-medium resize-none"
+              border border-line font-medium resize-none
+              focus-visible:ring-2 focus-visible:ring-accent"
             />
           </label>
 
