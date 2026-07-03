@@ -124,6 +124,7 @@ const technologies = [
 
 const experiences = [
   {
+    id: "uofa-cs-student",
     title: "Computer Science Student",
     company_name: "University of Arizona",
     icon: uofa,
@@ -131,6 +132,7 @@ const experiences = [
     date: "August 2020 - May 2024",
   },
   {
+    id: "uofa-housing-tech-assistant",
     title: "Student Technology Assistant",
     company_name: `Housing & Residential Life ${"@"} University of Arizona`,
     icon: uofa,
@@ -138,6 +140,7 @@ const experiences = [
     date: "June 2022 - May 2024",
   },
   {
+    id: "snap-software-engineer",
     title: "Software Engineer",
     company_name: "Snap Inc.",
     icon: snapchat,
@@ -145,6 +148,7 @@ const experiences = [
     date: "August 2024 - July 2025",
   },
   {
+    id: "rallyboard-software-engineer",
     title: "Software Engineer",
     company_name: "RallyBoard",
     icon: rallyboard,

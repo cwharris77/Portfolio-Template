@@ -56,6 +56,7 @@ const ExperienceCard = ({ experience }) => (
 );
 ExperienceCard.propTypes = {
   experience: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     iconBg: PropTypes.string.isRequired,
@@ -78,8 +79,8 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+          {experiences.map((experience) => (
+            <ExperienceCard key={experience.id} experience={experience} />
           ))}
           <VerticalTimelineElement
             contentStyle={{
@@ -117,7 +118,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  "/Cooper_Harris_Resume.pdf", //paste the link to your resume here
+                  "/Cooper_Harris_Resume.pdf",
                   "_blank",
                 )
               }
