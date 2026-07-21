@@ -36,7 +36,7 @@ const PERSONAL_EXTRAS = [
       "An AI-assisted task manager that tracks estimation accuracy over time, using Google Gemini to surface hidden complexity you missed when scoping a task.",
     stack: ["Next.js", "Supabase", "Google Gemini"],
     demo: "https://scopedin.app",
-    repo: null,
+    repo: "https://github.com/cwharris77/ScopedIn",
     logo: scopedinLogo,
   },
   {
